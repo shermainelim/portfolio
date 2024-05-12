@@ -259,8 +259,10 @@ const LandingPage = () => {
 
   const renderPortfolio = () => {
     return (
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div  className={cx("portfolio-container")}>
         <div
+
+className={!closePortfolio?portfolio?cx("border-portfolio-open"):cx("border-portfolio-closed"):cx("portfolio-none")}
           style={
             !closePortfolio
               ? portfolio
