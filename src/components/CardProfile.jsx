@@ -8,7 +8,7 @@ import { faBackward } from '@fortawesome/free-solid-svg-icons'
 import { faPause } from '@fortawesome/free-solid-svg-icons'
 import radioActive from "../assets/music/Radioactive.mp3";
 import techock from "../assets/music/Techock.mp3";
-import moonBeam from "../assets/music/MoonBeam.mp3";
+import moonBeam from "../assets/music/Moonbeam.mp3";
 import skyFortress from "../assets/music/Sky-Fortress.mp3";
 
 class CardProfile extends React.Component {
