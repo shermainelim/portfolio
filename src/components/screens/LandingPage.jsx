@@ -223,71 +223,31 @@ const LandingPage = () => {
             ? cx("border-music-open")
             : cx("border-music-closed")
         }
-          style={
-            music
-              ? {
-                  border: "0.0625rem solid white",
-                  backgroundColor: "rgb(255 161 61)",
-                  width: "15.625rem",
-                  height: "50rem",
-                  marginRight: "1.875rem",
-                }
-              : {
-                  border: "0.0625rem solid white",
-                  backgroundColor: "rgb(255 161 61)",
-                  width: "15.625rem",
-                  height: "2.1875rem",
-
-                  marginRight: "1.875rem",
-                }
-          }
+         
         >
-          <div style={{ display: "flex", flexDirection: "row" }}>
+          <div  className={cx("label-container")}>
             <div
-              style={{
-                color: "white",
-                marginTop: "0.375rem",
-                marginLeft: "0.4375rem",
-                fontSize: "1rem",
-              }}
+               className={cx("label")}
             >
               MUSIC.EXE
             </div>
             <img
-              style={{
-                width: "1.25rem",
-                height: "1.25rem",
-                marginTop: "0.3125rem",
-                marginLeft: "6.5625rem",
-              }}
+             className={cx("minimize-icon")}
+              
               src={minimize}
               alt="minimize"
               onClick={() => setMusic(!music)}
-            ></img>{" "}
+            ></img>
             <img
-              style={{
-                width: "1.25rem",
-                height: "1.25rem",
-                marginTop: "0.3125rem",
-                marginLeft: "0.3125rem",
-              }}
+            className={cx("close-icon")}
+              
               src={close}
               alt="close"
               onClick={() => setCloseMusic(!closeMusic)}
             ></img>
           </div>
           <img
-            style={
-              music
-                ? {
-                    marginTop: "0.5rem",
-                    width: "15.625rem",
-                    height: "13.75rem",
-                    objectFit: "cover",
-                    objectPosition: "10% 25%",
-                  }
-                : { display: "none" }
-            }
+            className={music?cx("music-img-show"):cx("music-img-none")}
             src={tech}
             alt="tech-music-player"
           ></img>
