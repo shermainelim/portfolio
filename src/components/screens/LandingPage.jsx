@@ -536,52 +536,26 @@ const LandingPage = () => {
     return (
       <div style={closeContact ? { display: "none" } : null}>
         <div
-          style={
-            contact
-              ? {
-                  border: "0.0625rem solid white",
-                  backgroundColor: "rgb(255 161 61)",
-                  width: "62.5rem",
-                  height: "12.8125rem",
-                }
-              : {
-                  border: "0.0625rem solid white",
-                  backgroundColor: "rgb(255 161 61)",
-                  width: "62.5rem",
-                  height: "2.1875rem",
-                }
-          }
+
+className={contact?cx("border-contact-open"):cx("border-contact-closed")}
+
+          
         >
-          <div style={{ display: "flex", flexDirection: "row" }}>
+          <div  className={cx("label-container")}>
             <div
-              style={{
-                color: "white",
-                marginTop: "0.375rem",
-                marginLeft: "0.4375rem",
-                fontSize: "1rem",
-              }}
+               className={cx("label")}
               id="contact"
             >
               CONTACT.PNG
             </div>
             <img
-              style={{
-                width: "1.25rem",
-                height: "1.25rem",
-                marginTop: "0.3125rem",
-                marginLeft: "51.875rem",
-              }}
+               className={cx("minimize-icon")}
               src={minimize}
               alt="minimize"
               onClick={() => setContact(!contact)}
             ></img>{" "}
             <img
-              style={{
-                width: "1.25rem",
-                height: "1.25rem",
-                marginTop: "0.3125rem",
-                marginLeft: "0.3125rem",
-              }}
+             className={cx("close-icon")}
               src={close}
               alt="close"
               onClick={() => setCloseContact(!closeContact)}
@@ -589,78 +563,38 @@ const LandingPage = () => {
           </div>
           <div>
             <div
-              style={
-                contact
-                  ? {
-                      display: "flex",
-                      flexDirection: "row",
-                      padding: "0.625rem",
-                      justifyContent: "center",
-                      marginTop: "-1.25rem",
-                    }
-                  : { display: "none" }
-              }
+
+className={contact?cx("img-container-show"):cx("img-container-none")}
+              
             >
-              {" "}
+             
               <img
-                style={{
-                  marginTop: "1rem",
-                  paddingLeft: "1.25rem",
-                  paddingRight: "1.25rem",
-                  objectFit: "cover",
-                  objectPosition: "10% 60%",
-                  width: "62.5rem",
-                  height: "9.8125rem",
-                  position: "absolute",
-                }}
+                   className={cx("img-banner")}
                 src={Waves}
-                alt="waves-icon"
-              ></img>
+                alt="tech-contact-banner"
+              />
               <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                  position: "absolute",
-                  alignContent: "space-evenly",
-                  marginTop: "0.4375rem",
-                }}
+                   className={cx("icon-container")}
               >
-                {" "}
-                <a href="mailto:codeandcharm@gmail.com">
+               
+                <a href="mailto:shermaine.lim.si.hui@gmail.com">
                   <img
-                    style={{
-                      marginTop: "1.25rem",
-                      width: "8.125rem",
-                      height: "8.125rem",
-                      marginLeft: "11.875rem",
-                      marginRight: "9.375rem",
-                    }}
+                     className={cx("icon-gmail")}
                     src={Gmail}
                     alt="Gmail-icon"
-                  ></img>{" "}
+                  ></img>
                 </a>
-                <a href="https://github.com">
-                  {" "}
+                <a href="https://github.com/shermainelim">
+                  
                   <img
-                    style={{
-                      marginTop: "1.25rem",
-                      width: "7.8125rem",
-                      height: "7.8125rem",
-                      marginRight: "9.375rem",
-                    }}
+                       className={cx("icon-github")}
                     src={GithubLogo}
                     alt="github-icon"
                   ></img>{" "}
                 </a>
-                <a href="https://linkedin.com">
+                <a href="https://www.linkedin.com/in/shermaine-lim/">
                   <img
-                    style={{
-                      marginTop: "1.25rem",
-                      width: "8.125rem",
-                      height: "8.125rem",
-                      marginRight: "9.375rem",
-                    }}
+                   className={cx("icon-linkedin")}
                     src={Linkedin}
                     alt="linked-in-icon"
                   ></img>
