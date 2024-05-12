@@ -78,7 +78,7 @@
 
     }
 
-    .accordion-container{
+    .accordion-first-section-container{
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -208,8 +208,34 @@
         }
     }
 
+     .accordion-second-section-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 1.875rem;
+        margin-left: 1.375rem;
 
+        .border-music-open{
+            border: 0.0625rem solid white;
+            background-color: #FF9933;
+            width: 15.625rem;
+            height: 50rem;
+            margin-right: 1.875rem;
+        }
+        .border-music-closed{
+            border: 0.0625rem solid white;
+            background-color:  #FF9933;
+            width: 15.625rem;
+            height: 2.1875rem;
+            margin-right: 1.875rem;
+        }
+     }
 
-   
-
+     .accordion-third-section-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -0.9375rem;
+        margin-bottom: 2.1875rem;
+     }
 }

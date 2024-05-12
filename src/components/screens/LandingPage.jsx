@@ -218,6 +218,11 @@ const LandingPage = () => {
     return (
       <div style={closeMusic ? { display: "none" } : null}>
         <div
+        className={
+          music
+            ? cx("border-music-open")
+            : cx("border-music-closed")
+        }
           style={
             music
               ? {
@@ -225,7 +230,6 @@ const LandingPage = () => {
                   backgroundColor: "rgb(255 161 61)",
                   width: "15.625rem",
                   height: "50rem",
-
                   marginRight: "1.875rem",
                 }
               : {
@@ -964,30 +968,20 @@ const LandingPage = () => {
       <Router>
         {renderNavBar()}
         <hr className={cx("separator-end")} />
-        <div className={cx("accordion-container")}>
+        <div className={cx("accordion-first-section-container")}>
           {renderProfile()}
           {renderAbout()}
         </div>
         <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            marginTop: "1.875rem",
-            marginLeft: "1.375rem",
-          }}
+        className={cx("accordion-second-section-container")}
+         
         >
           {renderMusicPlayer()}
           {renderPortfolio()}
         </div>
         <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            marginTop: "-0.9375rem",
-            marginBottom: "2.1875rem",
-          }}
+          className={cx("accordion-third-section-container")}
+        
         >
          {renderSkills()}
           {renderContact()}
