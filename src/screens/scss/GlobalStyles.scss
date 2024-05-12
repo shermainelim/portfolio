@@ -1,46 +1,37 @@
-
-
-body, html {
+body,
+html {
   background-image: url("../../assets//wall-bg.png");
-  
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-
 div#root {
-  //height: 100%; /* remove this line to see div.app is no more 100% height */
-background-image: url("../../assets//wall-bg.png");
- 
-  
+  background-image: url("../../assets//wall-bg.png");
   background-repeat: no-repeat;
-  background-size:cover;
-
+  background-size: cover;
 }
 
 div.app {
-  
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../../assets//wall-bg.png");
 }
 
-@media (max-width:60rem){
-  html{
-    font-size:0.5rem;
-  
+@media (max-width: 60rem) {
+  html {
+    font-size: 0.5rem;
   }
 }
 
-@media (max-width:60.0625rem) and (max-width: 64rem){
-  html{
-    font-size:0.5625rem;
+@media (max-width: 60.0625rem) and (max-width: 64rem) {
+  html {
+    font-size: 0.5625rem;
   }
 }
 
-@media (max-width:64.0625rem) and (max-width: 80.0625rem){
-  html{
-    font-size:0.6875rem;
+@media (max-width: 64.0625rem) and (max-width: 80.0625rem) {
+  html {
+    font-size: 0.6875rem;
   }
 }
 
@@ -50,31 +41,23 @@ div.app {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
 }
-
-
 
 .category {
   display: flex;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   flex-direction: column;
   align-items: center;
   color: rgb(184, 206, 249);
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .category-desc {
   display: flex;
-  margin-top: 16px;
+  margin-top: 1rem;
   flex-direction: column;
   align-items: center;
   color: gold;
-  font-size: 16px;
-  text-align:center;
+  font-size: 1rem;
+  text-align: center;
 }
-
-
-
-
-

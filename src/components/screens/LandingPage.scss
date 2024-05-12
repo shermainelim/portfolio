@@ -10,9 +10,9 @@
     object-fit: cover;
     width: 99%;
     height: 25rem;
-    border: 5px solid #fffae4;
+    border: 0.3125rem solid #fffae4;
     margin-left: 0.7rem;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
   }
 
   .separator-start {
@@ -158,28 +158,28 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin-top: 5px;
+      margin-top: 0.3125rem;
       background-color: black;
       width: 15.625rem;
       height: 10rem;
 
       .profile {
-        margin-top: 18px;
-        width: 110px;
-        height: 110px;
+        margin-top: 1.125rem;
+        width: 6.875rem;
+        height: 6.875rem;
       }
 
       .name-label {
         font-family: "Orbitron";
-        font-size: 16px;
+        font-size: 1rem;
         color: white;
       }
 
       .role-label {
         font-family: "Orbitron";
-        font-size: 12px;
+        font-size: 0.75rem;
         color: white;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
       }
     }
 
@@ -191,7 +191,7 @@
       color: white;
 
       .about-desc {
-        font-size: 16px;
+        font-size: 1rem;
         color: white;
         padding: 0.625rem;
         text-align: left;
@@ -307,7 +307,7 @@
         border: 0.0625rem solid white;
         background-color: #ff9933;
         width: 62.5rem;
-        height: 775px;
+        height: 48.4375rem;
 
         .label-container {
           display: flex;
@@ -336,14 +336,14 @@
         .portfolio-accordion-filler-open {
           margin-top: 0.625rem;
           width: 62.5rem;
-          height: 725px;
+          height: 45.3125rem;
           background-color: black;
           color: white;
           display: flex;
           flex-direction: column;
 
           .project-image-container {
-            margin-bottom: 10px;
+            margin-bottom: 0.625rem;
             display: flex;
             flex-direction: row;
 
@@ -451,7 +451,7 @@
         .portfolio-accordion-filler-open {
           margin-top: 0.625rem;
           width: 62.5rem;
-          height: 725px;
+          height: 45.3125rem;
           background-color: black;
           color: white;
           display: flex;
