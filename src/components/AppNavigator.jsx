@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import sciFi from "../assets/sci-fi-2.png";
+import sciFi from "../assets/sci-fi.png";
 import himori from "../assets/Himori.png";
 import orangeButton from "../assets/button.png";
 import pastelDreams from "../assets/pastel-dreams.png";
