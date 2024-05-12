@@ -1,8 +1,8 @@
 import React from "react";
-import AppNavigator from "./components/AppNavigator";
+import LandingPage from "./components/screens/LandingPage";
 
 const App = () => {
-  return <AppNavigator />
+  return <LandingPage/>
 };
 
 export default App;

@@ -48,9 +48,7 @@ div.app {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
   flex-direction: column;
-  //justify-content: center;
   align-items: center;
 
 }
@@ -61,7 +59,6 @@ div.app {
   display: flex;
   margin-top: 20px;
   flex-direction: column;
-  //justify-content: center;
   align-items: center;
   color: rgb(184, 206, 249);
   font-size: 18px;
@@ -71,7 +68,6 @@ div.app {
   display: flex;
   margin-top: 16px;
   flex-direction: column;
-  //justify-content: center;
   align-items: center;
   color: gold;
   font-size: 16px;

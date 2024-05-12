@@ -1,31 +1,35 @@
 import React, { useState } from "react";
+import styles from "./LandingPage.scss";
+import classNames from "classnames/bind";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import sciFi from "../assets/sci-fi.png";
-import himori from "../assets/Himori.png";
-import orangeButton from "../assets/button.png";
-import pastelDreams from "../assets/pastel-dreams.png";
-import coupleGoals from "../assets/couple-goals.png";
-import twilightEnd from "../assets/twilights-end-3d.png";
-import logicUniversity from "../assets/logic-university.png";
-import minimize from "../assets/minimize.png";
-import close from "../assets/close.png";
-import tech from "../assets/tech.gif";
-import CardProfile from "./CardProfile";
-import ReactIcon from "../assets/circular/react.png";
-import GithubLogo from "../assets/circular/github-logo.png";
-import Javascript from "../assets/circular/javascript.png";
-import TypeScript from "../assets/circular/typescript.svg";
-import AWS from "../assets/circular/aws.svg";
-import Figma from "../assets/circular/figma.svg";
-import nodeJS from "../assets/circular/nodeJS.png";
-import Gmail from "../assets/circular/gmail.png";
-import Linkedin from "../assets/circular/linkedin.png";
-import Waves from "../assets/waves.gif";
-import "../screens/scss/GlobalStyles.scss";
+import "../../screens/scss/GlobalStyles.scss";
+import sciFi from "../../assets/sci-fi.png";
+import himori from "../../assets/Himori.png";
+import orangeButton from "../../assets/button.png";
+import pastelDreams from "../../assets/pastel-dreams.png";
+import coupleGoals from "../../assets/couple-goals.png";
+import twilightEnd from "../../assets/twilights-end-3d.png";
+import logicUniversity from "../../assets/logic-university.png";
+import minimize from "../../assets/minimize.png";
+import close from "../../assets/close.png";
+import tech from "../../assets/tech.gif";
+import CardProfile from "../cards/CardProfile";
+import ReactIcon from "../../assets/circular/react.png";
+import GithubLogo from "../../assets/circular/github-logo.png";
+import Javascript from "../../assets/circular/javascript.png";
+import TypeScript from "../../assets/circular/typescript.svg";
+import AWS from "../../assets/circular/aws.svg";
+import Figma from "../../assets/circular/figma.svg";
+import nodeJS from "../../assets/circular/nodeJS.png";
+import Gmail from "../../assets/circular/gmail.png";
+import Linkedin from "../../assets/circular/linkedin.png";
+import Waves from "../../assets/waves.gif";
 
-const AppNavigator = () => {
-  const [asmr, setAsmr] = useState(true);
-  const [closeAsmr, setCloseAsmr] = useState(false);
+const LandingPage = () => {
+  const cx = classNames.bind(styles);
+
+  const [accordion, setAccordion] = useState(true);
+  const [closeAccordion, setcloseAccordion] = useState(false);
 
   const [about, setAbout] = useState(true);
   const [closeAbout, setCloseAbout] = useState(false);
@@ -42,64 +46,14 @@ const AppNavigator = () => {
   const [contact, setContact] = useState(true);
   const [closeContact, setCloseContact] = useState(false);
 
-  const playCoupleGoalsDemoVideo = () => {
-    return (
-      <div style={{position:"absolute"}}><iframe
-      width="560" height="315"
-      src="https://www.youtube.com/embed/mIRTlowfscw?si=OitLOI_07zSmKciR"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    /></div>
-      
-    );
-  };
-
   return (
-    <div
-      style={{
-        position: "absolute",
-        width: "90%",
-        paddingLeft: "3.75rem",
-        paddingRight: "3.75rem",
-      }}
-    >
-      <img
-        style={{
-          display: "block",
-          marginTop: "1.25rem",
-          objectFit: "cover",
-          width: "99%",
-          height: "25rem",
-          border: "5px solid #FFFAE4",
-          marginLeft: "0.7rem",
-          borderRadius: "5px",
-        }}
-        src={sciFi}
-        alt="sciFi"
-      />
+    <div className={cx("landing-page-main-container")}>
+      <img className={cx("banner")} src={sciFi} alt="sciFi" />
 
-      <hr
-        style={{
-          marginLeft: "1rem",
-
-          borderColor: "white",
-        }}
-      />
+      <hr className={cx("separator-start")} />
       <Router>
         <nav
-          style={{
-            textAlign: "center",
-            flexDirection: "row",
-            padding: "0.9375rem",
-            backgroundImage: "url(../../assets//wall-bg.png)",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            display: "flex",
-            justifyContent: "center",
-          }}
+          className={cx("background")}
         >
           <Link
             onClick={() =>
@@ -107,31 +61,18 @@ const AppNavigator = () => {
                 .getElementById("about")
                 .scrollIntoView({ behavior: "smooth" })
             }
-            style={{
-              fontSize: "1.125rem",
-              color: "gold",
-              textDecoration: "none",
-              padding: "1.25rem",
-              display: "flex",
-            }}
+
+            className={cx("nav-btn-container")}
+           
           >
             <img
-              style={{
-                marginTop: "-1.5625rem",
-                width: "7.5rem",
-                height: "3.75rem",
-              }}
+               className={cx("orange-btn")}
               src={orangeButton}
-              alt="pink-button"
+              alt="orange-button"
             ></img>
             <span
-              style={{
-                marginTop: "-0.5rem",
-                position: "absolute",
-                color: "white",
-                marginLeft: "2rem",
-                fontFamily: "Orbitron",
-              }}
+            className={cx("btn-short-label")}
+             
             >
               Home
             </span>
@@ -143,30 +84,15 @@ const AppNavigator = () => {
                 .getElementById("about")
                 .scrollIntoView({ behavior: "smooth" })
             }
-            style={{
-              fontSize: "1.125rem",
-              color: "gold",
-              textDecoration: "none",
-              padding: "1.25rem",
-            }}
+            className={cx("nav-btn-container")}
           >
             <img
-              style={{
-                marginTop: "-1.5625rem",
-                width: "7.5rem",
-                height: "3.75rem",
-              }}
+                className={cx("orange-btn")}
               src={orangeButton}
-              alt="pink-button"
+              alt="orange-button"
             ></img>
             <span
-              style={{
-                marginTop: "-0.5rem",
-                position: "absolute",
-                color: "white",
-                marginLeft: "-5.625rem",
-                fontFamily: "Orbitron",
-              }}
+                 className={cx("btn-short-label")}
             >
               About
             </span>
@@ -177,30 +103,17 @@ const AppNavigator = () => {
                 .getElementById("portfolio")
                 .scrollIntoView({ behavior: "smooth" })
             }
-            style={{
-              fontSize: "1.125rem",
-              color: "gold",
-              textDecoration: "none",
-              padding: "1.25rem",
-            }}
+            className={cx("nav-btn-container")}
           >
             <img
-              style={{
-                marginTop: "-1.5625rem",
-                width: "7.5rem",
-                height: "3.75rem",
-              }}
+                 className={cx("orange-btn")}
+              
               src={orangeButton}
-              alt="pink-button"
+              alt="orange-button"
             ></img>
             <span
-              style={{
-                marginTop: "-0.5rem",
-                position: "absolute",
-                color: "white",
-                marginLeft: "-6.25rem",
-                fontFamily: "Orbitron",
-              }}
+              className={cx("btn-long-label")}
+              
             >
               Portfolio
             </span>
@@ -211,30 +124,15 @@ const AppNavigator = () => {
                 .getElementById("skills")
                 .scrollIntoView({ behavior: "smooth" })
             }
-            style={{
-              fontSize: "1.125rem",
-              color: "gold",
-              textDecoration: "none",
-              padding: "1.25rem",
-            }}
+            className={cx("nav-btn-container")}
           >
             <img
-              style={{
-                marginTop: "-1.5625rem",
-                width: "7.5rem",
-                height: "3.75rem",
-              }}
+                className={cx("orange-btn")}
               src={orangeButton}
-              alt="pink-button"
+              alt="orange-button"
             ></img>
             <span
-              style={{
-                marginTop: "-0.5rem",
-                position: "absolute",
-                color: "white",
-                marginLeft: "-5.3125rem",
-                fontFamily: "Orbitron",
-              }}
+                 className={cx("btn-short-label")}
             >
               Skills
             </span>
@@ -246,153 +144,85 @@ const AppNavigator = () => {
                 .getElementById("contact")
                 .scrollIntoView({ behavior: "smooth" })
             }
-            style={{
-              fontSize: "1.125rem",
-              color: "gold",
-              textDecoration: "none",
-              padding: "1.25rem",
-            }}
+            className={cx("nav-btn-container")}
           >
             <img
-              style={{
-                marginTop: "-1.5625rem",
-                width: "7.5rem",
-                height: "3.75rem",
-              }}
+                className={cx("orange-btn")}
               src={orangeButton}
-              alt="pink-button"
+              alt="orange-button"
             ></img>
             <span
-              style={{
-                marginTop: "-0.5rem",
-                position: "absolute",
-                color: "white",
-                marginLeft: "-5.9375rem",
-                fontFamily: "Orbitron",
-              }}
+                className={cx("btn-long-label")}
+               
             >
               Contact
             </span>
           </Link>
         </nav>
         <hr
-          style={{
-            marginLeft: "1rem",
-            marginTop: "-1.5625rem",
 
-            borderColor: "white",
-          }}
+className={cx("separator-end")}
+
+          
         />
         <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            marginTop: "1.875rem",
-            marginLeft: "1.25rem",
-          }}
+          className={cx("accordion-container")}
         >
-          <div style={closeAsmr ? { display: "none" } : null}>
+          <div style={closeAccordion ? { display: "none" } : null}>
             <div
-              style={
-                asmr
-                  ? {
-                      border: "0.0625rem solid white",
-                      backgroundColor: "rgb(255 161 61)",
-                      width: "15.625rem",
-                      height: "11.875rem",
 
-                      marginRight: "1.875rem",
-                    }
-                  : {
-                      border: "0.0625rem solid white",
-                      backgroundColor: "rgb(255 161 61)",
-                      width: "15.625rem",
-                      height: "1.875rem",
-
-                      marginRight: "1.875rem",
-                    }
-              }
+className={accordion?cx("border-profile"):cx("border-profile-closed")}
+              
             >
-              <div style={{ display: "flex", flexDirection: "row" }}>
+              <div className={cx("label-container")}>
                 <div
-                  style={{
-                    color: "white",
-                    marginTop: "0.375rem",
-                    marginLeft: "0.4375rem",
-                    fontSize: "1rem",
-                  }}
+                className={cx("label")}
+                 
                 >
                   PROFILE.PNG
                 </div>
                 <img
-                  style={{
-                    width: "1.25rem",
-                    height: "1.25rem",
-                    marginTop: "0.3125rem",
-                    marginLeft: "88px",
-                  }}
+
+className={cx("minimize-icon-profile")}
+
+                 
                   src={minimize}
                   alt="minimize"
                   onClick={() => {
-                    setAsmr(!asmr);
+                    setAccordion(!accordion);
                   }}
-                ></img>{" "}
+                ></img>
                 <img
-                  style={{
-                    width: "1.25rem",
-                    height: "1.25rem",
-                    marginTop: "0.3125rem",
-                    marginLeft: "0.3125rem",
-                  }}
+                className={cx("close-icon")}
+                 
                   src={close}
                   alt="close"
                   onClick={() => {
-                    setCloseAsmr(!closeAsmr);
+                    setcloseAccordion(!closeAccordion);
                   }}
                 ></img>
               </div>
-              {asmr ? (
+              {accordion ? (
                 <div
-                  style={{
-                    marginTop: "5px",
-                    display: "flex",
-                    flexDirection: "column",
-                    backgroundColor: "black",
-                    width: "250px",
-                    height: "160px",
-                    justifyContent: "center",
-                    alignContent: "center",
-                    textAlign: "center",
-                  }}
+
+                className={cx("label-bg-filler")}
+
+                 
                 >
                   <img
-                    style={{
-                      marginTop: "18px",
-                      width: "110px",
-                      height: "110px",
-                      marginLeft: "70px",
-                    }}
+                    className={cx("profile")}
                     src={himori}
                     alt="profile"
                   />
 
                   <div
-                    style={{
-                      fontSize: "16px",
-                      fontFamily: "Orbitron",
-                      color: "white",
-                    }}
+                   className={cx("name-label")}
                   >
                     Shermaine Lim{" "}
                   </div>
                   <div
-                    style={{
-                      marginBottom: "20px",
-                      fontSize: "12px",
-                      fontFamily: "Orbitron",
-                      color: "white",
-                    }}
+                   className={cx("role-label")}
+
                   >
                     {" "}
                     - Software Engineer -{" "}
@@ -403,78 +233,41 @@ const AppNavigator = () => {
           </div>
           <div style={closeAbout ? { display: "none" } : null}>
             <div
-              style={
-                about
-                  ? {
-                      border: "0.0625rem solid white",
-                      backgroundColor: "rgb(255 161 61)",
-                      width: "62.5rem",
-                      height: "11.875rem",
-                    }
-                  : {
-                      border: "0.0625rem solid white",
-                      backgroundColor: "rgb(255 161 61)",
-                      width: "62.5rem",
-                      height: "2.1875rem",
-                    }
-              }
+
+className={about?cx("border-about"):cx("border-about-closed")}
             >
-              {" "}
-              <div style={{ display: "flex", flexDirection: "row" }}>
+          
+              <div className={cx("label-container")}>
                 <div
-                  style={{
-                    color: "white",
-                    marginTop: "0.375rem",
-                    marginLeft: "0.4375rem",
-                    fontSize: "1rem",
-                  }}
+                  className={cx("label")}
                   id="about"
                 >
                   ABOUT.PNG
                 </div>
                 <img
-                  style={{
-                    width: "1.25rem",
-                    height: "1.25rem",
-                    marginTop: "0.3125rem",
-                    marginLeft: "850px",
-                  }}
+
+className={cx("minimize-icon-about")}
+                  
                   src={minimize}
                   alt="minimize"
                   onClick={() => setAbout(!about)}
                 ></img>{" "}
                 <img
-                  style={{
-                    width: "1.25rem",
-                    height: "1.25rem",
-                    marginTop: "0.3125rem",
-                    marginLeft: "0.3125rem",
-                  }}
+
+className={cx("close-icon")}
+                 
                   src={close}
                   alt="close"
                   onClick={() => setCloseAbout(!closeAbout)}
                 ></img>
               </div>
               <div
-                style={
-                  about
-                    ? {
-                        marginTop: "0.625rem",
-                        width: "62.5rem",
-                        height: "8.125rem",
-                        backgroundColor: "black",
-                        color: "white",
-                      }
-                    : { display: "none" }
-                }
+
+className={about?cx("about-label-container"):cx("about-label-container-invisible")}
+                
               >
                 <div
-                  style={{
-                    padding: "0.625rem",
-                    textAlign: "left",
-                    fontFamily: "san-serif",
-                    fontSize: "16px",
-                  }}
+                  className={cx("about-desc")}
                 >
                   Frontend React Engineer skilled in web and mobile development
                   with JavaScript, TypeScript, ReactJS, and React Native.
@@ -651,24 +444,26 @@ const AppNavigator = () => {
                     flexDirection: "row",
                   }}
                 >
-                  <a  href="https://github.com/shermainelim/CoupleGoalsApp"
-                        style={{ textDecoration: "none", color: "white" }}>
-                  <img
-                    style={
-                      portfolio
-                        ? {
-                            width: "9.375rem",
-                            height: "9.375rem",
-                            marginTop: "1.25rem",
-                            marginLeft: "0.9375rem",
-                            marginRight: "0.3125rem",
-                          }
-                        : { display: "none" }
-                    }
-                    src={coupleGoals}
-                    alt="couple-goals"
-                  />
-           </a>
+                  <a
+                    href="https://github.com/shermainelim/CoupleGoalsApp"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    <img
+                      style={
+                        portfolio
+                          ? {
+                              width: "9.375rem",
+                              height: "9.375rem",
+                              marginTop: "1.25rem",
+                              marginLeft: "0.9375rem",
+                              marginRight: "0.3125rem",
+                            }
+                          : { display: "none" }
+                      }
+                      src={coupleGoals}
+                      alt="couple-goals"
+                    />
+                  </a>
 
                   <div style={{ padding: "0.625rem", textAlign: "left" }}>
                     <div
@@ -781,9 +576,16 @@ const AppNavigator = () => {
                     >
                       Tech Stack : C# and Unity Engine <br />
                       <br />
-                      This is a team project under Video Game Design and Programming module in my masters program. My team and I learnt how to create AI states on enemies, NPCs, game logic , 3D animation , modelling, audio theory and so on etc. 
-                      <br/>Story: A hybrid vampire and human hero is hired to rid sun blob enemies that have invaded the Land of Vampara. Pure vampires cannot be in contact with the sunlight and live in Vampara with eternal crimson nights. 
-                   
+                      This is a team project under Video Game Design and
+                      Programming module in my masters program. My team and I
+                      learnt how to create AI states on enemies, NPCs, game
+                      logic , 3D animation , modelling, audio theory and so on
+                      etc.
+                      <br />
+                      Story: A hybrid vampire and human hero is hired to rid sun
+                      blob enemies that have invaded the Land of Vampara. Pure
+                      vampires cannot be in contact with the sunlight and live
+                      in Vampara with eternal crimson nights.
                     </div>
                   </div>
                 </div>
@@ -849,10 +651,15 @@ const AppNavigator = () => {
                           : { display: "none" }
                       }
                     >
-                     Tech Stack: C# ASP.NET Core & Azure Machine Learning <br />
+                      Tech Stack: C# ASP.NET Core & Azure Machine Learning{" "}
                       <br />
-                      This project is a full Software Development Life Cycle and about delivering a software solution aimed at computerizing and improving LOGIC University Stationary Store’s inventory and disbursement system. <br/>
-                      Its main objective is to eliminate the reliance on manual processes.
+                      <br />
+                      This project is a full Software Development Life Cycle and
+                      about delivering a software solution aimed at
+                      computerizing and improving LOGIC University Stationary
+                      Store’s inventory and disbursement system. <br />
+                      Its main objective is to eliminate the reliance on manual
+                      processes.
                     </div>
                   </div>
                 </div>
@@ -919,8 +726,8 @@ const AppNavigator = () => {
                       }
                     >
                       Tech Stack: Vanilla JavaScript <br />
-                      <br />
-                      A 2-D Web-based aesthetic style portfolio with HTML, CSS and plain JS to minimize external dependencies. 
+                      <br />A 2-D Web-based aesthetic style portfolio with HTML,
+                      CSS and plain JS to minimize external dependencies.
                     </div>
                   </div>
                 </div>
@@ -1229,4 +1036,4 @@ const AppNavigator = () => {
   );
 };
 
-export default AppNavigator;
+export default LandingPage;
