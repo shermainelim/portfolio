@@ -1,7 +1,7 @@
 
 
 body, html {
-  background-image: url("../../assets//pixel-bg.png");
+  background-image: url("../../assets//wall-bg.png");
   
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,7 +10,7 @@ body, html {
 
 div#root {
   //height: 100%; /* remove this line to see div.app is no more 100% height */
-background-image: url("../../assets//pixel-bg.png");
+background-image: url("../../assets//wall-bg.png");
  
   
   background-repeat: no-repeat;
@@ -22,7 +22,7 @@ div.app {
   
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../../assets//pixel-bg.png");
+  background-image: url("../../assets//wall-bg.png");
 }
 
 @media (max-width:60rem){
