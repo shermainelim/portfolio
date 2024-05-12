@@ -46,119 +46,125 @@ const LandingPage = () => {
   const [contact, setContact] = useState(true);
   const [closeContact, setCloseContact] = useState(false);
 
+  const renderNavBar = ()=>{
+    return(
+      <nav
+      className={cx("background")}
+    >
+      <Link
+        onClick={() =>
+          document
+            .getElementById("about")
+            .scrollIntoView({ behavior: "smooth" })
+        }
+
+        className={cx("nav-btn-container")}
+       
+      >
+        <img
+           className={cx("orange-btn")}
+          src={orangeButton}
+          alt="orange-button"
+        ></img>
+        <span
+        className={cx("btn-short-label")}
+         
+        >
+          Home
+        </span>
+      </Link>
+
+      <Link
+        onClick={() =>
+          document
+            .getElementById("about")
+            .scrollIntoView({ behavior: "smooth" })
+        }
+        className={cx("nav-btn-container")}
+      >
+        <img
+            className={cx("orange-btn")}
+          src={orangeButton}
+          alt="orange-button"
+        ></img>
+        <span
+             className={cx("btn-short-label")}
+        >
+          About
+        </span>
+      </Link>
+      <Link
+        onClick={() =>
+          document
+            .getElementById("portfolio")
+            .scrollIntoView({ behavior: "smooth" })
+        }
+        className={cx("nav-btn-container")}
+      >
+        <img
+             className={cx("orange-btn")}
+          
+          src={orangeButton}
+          alt="orange-button"
+        ></img>
+        <span
+          className={cx("btn-long-label")}
+          
+        >
+          Portfolio
+        </span>
+      </Link>
+      <Link
+        onClick={() =>
+          document
+            .getElementById("skills")
+            .scrollIntoView({ behavior: "smooth" })
+        }
+        className={cx("nav-btn-container")}
+      >
+        <img
+            className={cx("orange-btn")}
+          src={orangeButton}
+          alt="orange-button"
+        ></img>
+        <span
+             className={cx("btn-short-label")}
+        >
+          Skills
+        </span>
+      </Link>
+
+      <Link
+        onClick={() =>
+          document
+            .getElementById("contact")
+            .scrollIntoView({ behavior: "smooth" })
+        }
+        className={cx("nav-btn-container")}
+      >
+        <img
+            className={cx("orange-btn")}
+          src={orangeButton}
+          alt="orange-button"
+        ></img>
+        <span
+            className={cx("btn-long-label")}
+           
+        >
+          Contact
+        </span>
+      </Link>
+    </nav>
+    )
+  }
+
   return (
     <div className={cx("landing-page-main-container")}>
       <img className={cx("banner")} src={sciFi} alt="sciFi" />
 
       <hr className={cx("separator-start")} />
       <Router>
-        <nav
-          className={cx("background")}
-        >
-          <Link
-            onClick={() =>
-              document
-                .getElementById("about")
-                .scrollIntoView({ behavior: "smooth" })
-            }
-
-            className={cx("nav-btn-container")}
-           
-          >
-            <img
-               className={cx("orange-btn")}
-              src={orangeButton}
-              alt="orange-button"
-            ></img>
-            <span
-            className={cx("btn-short-label")}
-             
-            >
-              Home
-            </span>
-          </Link>
-
-          <Link
-            onClick={() =>
-              document
-                .getElementById("about")
-                .scrollIntoView({ behavior: "smooth" })
-            }
-            className={cx("nav-btn-container")}
-          >
-            <img
-                className={cx("orange-btn")}
-              src={orangeButton}
-              alt="orange-button"
-            ></img>
-            <span
-                 className={cx("btn-short-label")}
-            >
-              About
-            </span>
-          </Link>
-          <Link
-            onClick={() =>
-              document
-                .getElementById("portfolio")
-                .scrollIntoView({ behavior: "smooth" })
-            }
-            className={cx("nav-btn-container")}
-          >
-            <img
-                 className={cx("orange-btn")}
-              
-              src={orangeButton}
-              alt="orange-button"
-            ></img>
-            <span
-              className={cx("btn-long-label")}
-              
-            >
-              Portfolio
-            </span>
-          </Link>
-          <Link
-            onClick={() =>
-              document
-                .getElementById("skills")
-                .scrollIntoView({ behavior: "smooth" })
-            }
-            className={cx("nav-btn-container")}
-          >
-            <img
-                className={cx("orange-btn")}
-              src={orangeButton}
-              alt="orange-button"
-            ></img>
-            <span
-                 className={cx("btn-short-label")}
-            >
-              Skills
-            </span>
-          </Link>
-
-          <Link
-            onClick={() =>
-              document
-                .getElementById("contact")
-                .scrollIntoView({ behavior: "smooth" })
-            }
-            className={cx("nav-btn-container")}
-          >
-            <img
-                className={cx("orange-btn")}
-              src={orangeButton}
-              alt="orange-button"
-            ></img>
-            <span
-                className={cx("btn-long-label")}
-               
-            >
-              Contact
-            </span>
-          </Link>
-        </nav>
+      {renderNavBar()}
         <hr
 
 className={cx("separator-end")}
