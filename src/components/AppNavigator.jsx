@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import sciFi from "../assets/sci-fi-2.png";
 import himori from "../assets/Himori.png";
 import orangeButton from "../assets/button.png";
-import pixelMagic from "../assets/pixelmagic.png";
+import pastelDreams from "../assets/pastel-dreams.png";
 import coupleGoals from "../assets/couple-goals.png";
 import twilightEnd from "../assets/twilights-end-3d.png";
+import logicUniversity from "../assets/logic-university.png";
 import minimize from "../assets/minimize.png";
 import close from "../assets/close.png";
-import vaporwaveStatue from "../assets/statue-vaporwave.gif";
+import tech from "../assets/tech.gif";
 import CardProfile from "./CardProfile";
 import ReactIcon from "../assets/circular/react.png";
 import GithubLogo from "../assets/circular/github-logo.png";
@@ -567,7 +568,7 @@ const AppNavigator = () => {
                       }
                     : { display: "none" }
                 }
-                src={vaporwaveStatue}
+                src={tech}
                 alt="vapor-wave-statue"
               ></img>
               {music ? <CardProfile /> : null}
@@ -794,7 +795,7 @@ const AppNavigator = () => {
                     flexDirection: "row",
                   }}
                 >
-                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7194014025083424769/">
+                  <a href="https://github.com/shermainelim/Logic-University-Stationery-Inventory-System">
                     <img
                       style={
                         portfolio
@@ -807,8 +808,8 @@ const AppNavigator = () => {
                             }
                           : { display: "none" }
                       }
-                      src={pixelMagic}
-                      alt="pixel-magic"
+                      src={logicUniversity}
+                      alt="logic-university"
                     ></img>
                   </a>
                   <div style={{ padding: "0.625rem", textAlign: "left" }}>
@@ -827,10 +828,10 @@ const AppNavigator = () => {
                       }
                     >
                       <a
-                        href="https://itch.io"
+                        href="https://github.com/shermainelim/Logic-University-Stationery-Inventory-System"
                         style={{ textDecoration: "none", color: "white" }}
                       >
-                        Pixel RPG Game
+                        Stationery Logistics Inventory System
                       </a>
                     </div>
                     <div
@@ -848,16 +849,10 @@ const AppNavigator = () => {
                           : { display: "none" }
                       }
                     >
-                      I made this game with Unity and C# programming language.
-                      It is free to play on Itch.io. <br />
+                     Tech Stack: C# ASP.NET Core & Azure Machine Learning <br />
                       <br />
-                      This is a relaxing game with beautiful pixel art. You are
-                      a student who has become disillusioned with life after a
-                      series of unfortunate events. One day you fall asleep and
-                      find yourself in a forest. To wake up, you must find
-                      <br />
-                      the events in the map. By the end of the game , you would
-                      have achieved self love and inner peace.{" "}
+                      This project is a full Software Development Life Cycle and about delivering a software solution aimed at computerizing and improving LOGIC University Stationary Store’s inventory and disbursement system. <br/>
+                      Its main objective is to eliminate the reliance on manual processes.
                     </div>
                   </div>
                 </div>
@@ -869,21 +864,21 @@ const AppNavigator = () => {
                     flexDirection: "row",
                   }}
                 >
-                  <a href="https://itch.io">
+                  <a href="https://pastelwithdreams.netlify.app/">
                     <img
                       style={
                         portfolio
                           ? {
                               width: "9.375rem",
-                              height: "9.375rem",
+                              height: "110px",
                               marginTop: "1.25rem",
                               marginLeft: "0.9375rem",
                               marginRight: "0.3125rem",
                             }
                           : { display: "none" }
                       }
-                      src={pixelMagic}
-                      alt="pixel-magic"
+                      src={pastelDreams}
+                      alt="pastel-dreams"
                     ></img>
                   </a>
                   <div style={{ padding: "0.625rem", textAlign: "left" }}>
@@ -902,10 +897,10 @@ const AppNavigator = () => {
                       }
                     >
                       <a
-                        href="https://itch.io"
+                        href="https://pastelwithdreams.netlify.app/"
                         style={{ textDecoration: "none", color: "white" }}
                       >
-                        Pixel RPG Game
+                        JavaScript Aesthetic Portfolio
                       </a>
                     </div>
                     <div
@@ -923,16 +918,9 @@ const AppNavigator = () => {
                           : { display: "none" }
                       }
                     >
-                      I made this game with Unity and C# programming language.
-                      It is free to play on Itch.io. <br />
+                      Tech Stack: Vanilla JavaScript <br />
                       <br />
-                      This is a relaxing game with beautiful pixel art. You are
-                      a student who has become disillusioned with life after a
-                      series of unfortunate events. One day you fall asleep and
-                      find yourself in a forest. To wake up, you must find
-                      <br />
-                      the events in the map. By the end of the game , you would
-                      have achieved self love and inner peace.{" "}
+                      A 2-D Web-based aesthetic style portfolio with HTML, CSS and plain JS to minimize external dependencies. 
                     </div>
                   </div>
                 </div>

@@ -6,19 +6,19 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 import { faForward } from '@fortawesome/free-solid-svg-icons'
 import { faBackward } from '@fortawesome/free-solid-svg-icons'
 import { faPause } from '@fortawesome/free-solid-svg-icons'
-import powerMakeUp from "../assets/music/Power Make Up.ogg";
-import dreamyRoom from "../assets/music/One-room dreamy days.ogg";
-import everyTimeAround from "../assets/music/Vansire - Every Time Around.ogg";
-import FILA from "../assets/music/F.I.L.A.ogg";
+import radioActive from "../assets/music/Radioactive.mp3";
+import techock from "../assets/music/Techock.mp3";
+import moonBeam from "../assets/music/MoonBeam.mp3";
+import skyFortress from "../assets/music/Sky-Fortress.mp3";
 
 class CardProfile extends React.Component {
 
     state = {
       index: 3,
       currentTime: '0:00',
-      musicList: [{name:'Power Make Up', author: 'Vantage', audio: powerMakeUp, duration: '3.58'}, 
-{name:'F.I.L.A', author: 'Macross 82-99', audio:FILA, duration: '2.12'},
-        {name:'Every Time Around', author: 'Vansire', audio:everyTimeAround, duration: '2.12'},        {name:'One-room Dreamy Days', author: 'Rachie',  audio:dreamyRoom, duration: '3.11'},
+      musicList: [{name:'Radioactive', author: 'Waterflame', audio: radioActive, duration: '3.45'}, 
+{name:'Sky Fortress', author: 'Waterflame', audio:skyFortress, duration: '4.34'},
+        {name:'Moonbeam', author: 'Waterflame', audio:moonBeam, duration: '4.44'},        {name:'Techock', author: 'Waterflame',  audio:techock, duration: '2.33'},
         ],
       pause: false,
     };
