@@ -1,0 +1,69 @@
+@import "../../src/screens/scss/colors";
+
+.basic {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  border: none;
+  color: #fff;
+  margin: 1rem;
+  outline: none;
+  border-radius: 6.25rem;
+  min-width: 20rem;
+  height: 3.125rem;
+  font-weight: 600;
+}
+
+.btn {
+  background-color: $kaya-green;
+}
+
+.add-ticket-btn {
+  background-color: $golden-ticket;
+}
+
+.resident-btn {
+  background-color: $royal-purple;
+}
+
+.staff-btn {
+  background-color: $chocolate-brown;
+}
+
+.default-color {
+  background-color: $sea-blue;
+}
+
+.submit-color {
+  background-color: $positive-green;
+}
+
+.logout-color {
+  background-color: $out-red;
+}
+
+.login-verify-color {
+  background-color: $verify-green;
+}
+
+.staff-logout {
+  background-color: $tomato-red;
+}
+
+.admin-btn {
+  background-color: $royal-blue;
+}
+
+.chocolate-bar {
+  background-color: $chocolate-bar;
+}
+
+.civil-blog-btn{
+  background-color: rgb(66, 235, 204);
+  color: #0F044C;
+}
+
+.ian-btn{
+  background-color:gold;
+  color: #0F044C;
+  margin-bottom: 2.5rem;
+}
