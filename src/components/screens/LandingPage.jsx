@@ -465,60 +465,24 @@ const LandingPage = () => {
 
   const renderSkills = () => {
     return (
-      <div
-        style={closeSkills ? { display: "none" } : { marginLeft: "1.375rem" }}
-      >
+      <div className={!closeSkills ? cx("skills-open") : cx("skills-closed")}>
         <div
-          style={
-            skills
-              ? {
-                  border: "0.0625rem solid white",
-                  backgroundColor: "rgb(255 161 61)",
-                  width: "15.625rem",
-                  height: "12.8125rem",
-
-                  marginRight: "1.875rem",
-                }
-              : {
-                  border: "0.0625rem solid white",
-                  backgroundColor: "rgb(255 161 61)",
-                  width: "15.625rem",
-                  height: "2.1875rem",
-
-                  marginRight: "1.875rem",
-                }
+          className={
+            skills ? cx("border-skills-open") : cx("border-skills-closed")
           }
         >
-          <div style={{ display: "flex", flexDirection: "row" }}>
-            <div
-              style={{
-                color: "white",
-                marginTop: "0.375rem",
-                marginLeft: "0.4375rem",
-                fontSize: "1rem",
-              }}
-              id="skills"
-            >
+          <div className={cx("label-container")}>
+            <div className={cx("label")} id="skills">
               SKILLS.PNG
             </div>
             <img
-              style={{
-                width: "1.25rem",
-                height: "1.25rem",
-                marginTop: "0.3125rem",
-                marginLeft: "6.25rem",
-              }}
+              className={cx("minimize-icon")}
               src={minimize}
               alt="minimize"
               onClick={() => setSkills(!skills)}
-            ></img>{" "}
+            ></img>
             <img
-              style={{
-                width: "1.25rem",
-                height: "1.25rem",
-                marginTop: "0.3125rem",
-                marginLeft: "0.3125rem",
-              }}
+              className={cx("close-icon")}
               src={close}
               alt="close"
               onClick={() => {
@@ -527,85 +491,37 @@ const LandingPage = () => {
             ></img>
           </div>
           <div
-            style={
-              skills
-                ? { marginTop: "0.3125rem", backgroundColor: "black" }
-                : { display: "none" }
+            className={
+              skills ? cx("accordion-filler-show") : cx("accordion-filler-none")
             }
           >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                padding: "0.625rem",
-                justifyContent: "center",
-              }}
-            >
+            <div className={cx("icon-container-top")}>
               <img
-                style={{
-                  marginTop: "0.1875rem",
-                  width: "4.375rem",
-                  height: "4.375rem",
-                }}
+                className={cx("icon-img")}
                 src={ReactIcon}
                 alt="react-icon"
-              ></img>{" "}
+              ></img>
               <img
-                style={{
-                  marginTop: "-0.1875rem",
-                  width: "4.875rem",
-                  height: "4.875rem",
-                }}
+                className={cx("icon-img")}
                 src={Javascript}
                 alt="javascript-icon"
               ></img>{" "}
-              <img
-                style={{
-                  marginTop: "0.3125rem",
-                  width: "3.9375rem",
-                  height: "3.9375rem",
-                }}
-                src={AWS}
-                alt="aws-icon"
-              ></img>
+              <img className={cx("icon-img")} src={AWS} alt="aws-icon"></img>
             </div>
 
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                padding: "0.625rem",
-                justifyContent: "center",
-                marginTop: "-1.25rem",
-              }}
-            >
+            <div className={cx("icon-container-bottom")}>
               <img
-                style={{
-                  marginTop: "0.125rem",
-                  width: "3.6875rem",
-                  height: "3.6875rem",
-                  marginRight: "0.625rem",
-                  marginLeft: "0.625rem",
-                }}
+                className={cx("icon-img")}
                 src={nodeJS}
                 alt="nodeJS-icon"
               ></img>{" "}
               <img
-                style={{
-                  marginTop: "-0.125rem",
-                  width: "4.0625rem",
-                  height: "4.0625rem",
-                  marginRight: "0.625rem",
-                }}
+                className={cx("icon-img")}
                 src={Figma}
                 alt="figma-icon"
               ></img>{" "}
               <img
-                style={{
-                  marginTop: "-0.0625rem",
-                  width: "3.8125rem",
-                  height: "3.8125rem",
-                }}
+                className={cx("icon-img")}
                 src={TypeScript}
                 alt="typescript-icon"
               ></img>

@@ -1,4 +1,4 @@
-$border-radius: 20px;
+$border-radius: 1.25rem;
 
 $primary: #000000;
 $base: #000000;
@@ -7,7 +7,7 @@ $lighter-shadow: rgba($shadow-color, .7);
 $white: #FFEBEB;
 $gray: #8c8c8c;
 $lighter-gray: rgba($gray, .1);
-$time-line-width: 240px;
+$time-line-width: 15rem;
 $transition: .3s all ease;
 
 body{
@@ -15,7 +15,7 @@ body{
   color: $base;
 
   h1{
-    font-size: 36px;
+    font-size: 2.25rem;
     margin-bottom: 0;
   }
   .card{
@@ -23,12 +23,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 371px;
-    padding: 0 5px;
-    margin-top: -5px;
+    max-width: 23.1875rem;
+    padding: 0 0.3125rem;
+    margin-top: -0.3125rem;
     color: $white;
     font-weight: 100;
-    box-shadow: 0px 0px 70px 0px $shadow-color;
+    box-shadow: 0rem 0rem 4.375rem 0rem $shadow-color;
     background: $base;
     overflow: hidden;
     .current-song{
@@ -36,32 +36,32 @@ body{
       flex-direction: column;
       align-items: center;
       width: 100%;
-      padding: 20px 0px;
+      padding: 1.25rem 0rem;
       border-radius: $border-radius;
       color: $base;
       background: $white;
-      margin-top: 30px;
-      padding-left: 40px;
-      padding-right: 40px;
+      margin-top: 1.875rem;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
       audio{
         display: none;
       }
       .img-wrap{
         position: relative;
         margin: 0 auto;
-        width: 270px;
-        height: 200px;
+        width: 16.875rem;
+        height: 12.5rem;
         overflow: hidden;
-        border-radius: 20px;
-        box-shadow: 0px 10px 40px 0px $lighter-shadow;
+        border-radius: 1.25rem;
+        box-shadow: 0rem 0.625rem 2.5rem 0rem $lighter-shadow;
         img {
           width: auto;
           height: 100%;
         }
       }
       .song-name{
-        margin-top: 30px;
-        font-size: 22px;
+        margin-top: 1.875rem;
+        font-size: 1.375rem;
       }
       .song-autor{
         color: $primary;
@@ -69,7 +69,7 @@ body{
       .time{
         display: flex;
         justify-content: space-between;
-        margin-top: 10px;
+        margin-top: 0.625rem;
         width: $time-line-width;
       
       }
@@ -77,9 +77,9 @@ body{
         position: relative;
         margin: 0 auto;
         width: $time-line-width;
-        height: 5px;
+        height: 0.3125rem;
         background: $primary;
-        border-radius: 5px;
+        border-radius: 0.3125rem;
         cursor: pointer;
         &:hover{
           .hover-playhead{
@@ -96,8 +96,8 @@ body{
           position: relative;
           z-index: 2;
           width: 0;
-          height: 5px;
-          border-radius: 5px;
+          height: 0.3125rem;
+          border-radius: 0.3125rem;
           background: $base;
         }
         .hover-playhead{
@@ -105,9 +105,9 @@ body{
           z-index: 1;
           top: 0;
           width: 0;
-          height: 5px;
+          height: 0.3125rem;
           opacity: 0;
-          border-radius: 5px;
+          border-radius: 0.3125rem;
           background: $shadow-color;
           transition: opacity .3s;
           &::before{
@@ -115,35 +115,35 @@ body{
             content: attr(data-content);
             display: block;
             position: absolute;
-            top: -30px;
-            right: -23px;
-            width: 40px;
-            padding: 3px;
+            top: -1.875rem;
+            right: -1.4375rem;
+            width: 2.5rem;
+            padding: 0.1875rem;
             text-align: center;
             color: white;
             background: $shadow-color;
-            border-radius: calc( #{$border-radius} - 12px);
+            border-radius: calc( #{$border-radius} - 0.75rem);
           }
           &::after{
             opacity: 0;
             content:'';
             display: block;
             position: absolute;
-            top: -8px;
-            right: -8px;
-            border-top: 8px solid $shadow-color;
-            border-left:8px solid transparent;
-            border-right:8px solid transparent;
+            top: -0.5rem;
+            right: -0.5rem;
+            border-top: 0.5rem solid $shadow-color;
+            border-left:0.5rem solid transparent;
+            border-right:0.5rem solid transparent;
           }
         }
       }
       .controls{
-        margin-top: 10px;
+        margin-top: 0.625rem;
         button{
           color: $base;
           border-radius: 50%;
-          margin: 15px;
-          font-size: 18px;
+          margin: 0.9375rem;
+          font-size: 1.125rem;
           text-align: center;
           transition: 0.2s;
           cursor: pointer;
@@ -153,20 +153,20 @@ body{
             outline: none;
           }
           &.play{
-            width: 50px;
-            height: 50px;
-            border: 1px solid #e2e2e2;
+            width: 3.125rem;
+            height: 3.125rem;
+            border: 0.0625rem solid #e2e2e2;
             &:hover{
               left: 0;
-              box-shadow: 0px 0px 15px 0px  $lighter-shadow;
+              box-shadow: 0rem 0rem 0.9375rem 0rem  $lighter-shadow;
             }
             .fa-play{
-              transform: translateX(2px);
+              transform: translateX(0.125rem);
             }
           }
           &.prev-next{
-            width: 35px;
-            height: 35px;
+            width: 2.1875rem;
+            height: 2.1875rem;
             &:hover{
               transform: scale(1.2);
             }
@@ -177,15 +177,15 @@ body{
     .play-list{
       display: flex;
       flex-direction: column;
-      padding: 10px;
-      height: 263px;
+      padding: 0.625rem;
+      height: 223px;
       overflow-y: scroll;
       .track{
         display: flex;
         align-items: center;
-        margin-bottom: 10px;
-        border-radius: calc( #{$border-radius} - 10px);
-        border: 1px solid transparent;
+        margin-bottom: 0.625rem;
+        border-radius: calc( #{$border-radius} - 0.625rem);
+        border: 0.0625rem solid transparent;
         transition: 0.3s;
         cursor: pointer;
         &:hover{
@@ -195,55 +195,55 @@ body{
         }
         &.current-audio{
           background: $shadow-color;
-          box-shadow: 0px 0px 15px 0px $shadow-color;
+          box-shadow: 0rem 0rem 0.9375rem 0rem $shadow-color;
         }
         &.play-now{
           background: $shadow-color;
-          box-shadow: 0px 0px 15px 0px  $shadow-color;
+          box-shadow: 0rem 0rem 0.9375rem 0rem  $shadow-color;
           position: relative;
         &:after{
           content: '';
           display: block;
           position: absolute;
-          left:17px;
-          width: 57px;
-          height: 57px;
-          border-radius: calc( #{$border-radius} - 10px);
-          font-size: 16px;
+          left:1.0625rem;
+          width: 3.5625rem;
+          height: 3.5625rem;
+          border-radius: calc( #{$border-radius} - 0.625rem);
+          font-size: 1rem;
           // animation: play 2s linear infinite;
-          // background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 56 56' style='enable-background:new 0 0 56 56;' xml:space='preserve'%3E%3Cpath style='fill:%23071739;' d='M47.799,8.201c-10.935-10.935-28.663-10.935-39.598,0c-10.935,10.935-10.935,28.663,0,39.598 c10.935,10.935,28.663,10.935,39.598,0C58.734,36.864,58.734,19.136,47.799,8.201z M32.95,32.95c-2.734,2.734-7.166,2.734-9.899,0 c-2.734-2.734-2.734-7.166,0-9.899s7.166-2.734,9.899,0S35.683,30.216,32.95,32.95z'/%3E%3Cpath style='fill:%23E7ECED;' d='M35.778,20.222c-4.296-4.296-11.261-4.296-15.556,0c-4.296,4.296-4.296,11.261,0,15.556 c4.296,4.296,11.261,4.296,15.556,0C40.074,31.482,40.074,24.518,35.778,20.222z M30.121,30.121c-1.172,1.172-3.071,1.172-4.243,0 s-1.172-3.071,0-4.243s3.071-1.172,4.243,0S31.293,28.95,30.121,30.121z'/%3E%3Cg%3E%3Cpath style='fill:%23709fdc;' d='M35.778,35.778c-0.76,0.76-1.607,1.378-2.504,1.87l8.157,14.92c2.284-1.25,4.434-2.835,6.368-4.769 c1.934-1.934,3.519-4.084,4.769-6.368l-14.92-8.157C37.157,34.172,36.538,35.018,35.778,35.778z'/%3E%3Cpath style='fill:%23709fdc;' d='M20.222,20.222c0.76-0.76,1.607-1.378,2.504-1.87l-8.157-14.92c-2.284,1.25-4.434,2.835-6.368,4.769 s-3.519,4.084-4.769,6.368l14.92,8.157C18.843,21.828,19.462,20.982,20.222,20.222z'/%3E%3C/g%3E%3C/svg%3E");
+          // background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0rem' y='0rem' viewBox='0 0 56 56' style='enable-background:new 0 0 56 56;' xml:space='preserve'%3E%3Cpath style='fill:%23071739;' d='M47.799,8.201c-10.935-10.935-28.663-10.935-39.598,0c-10.935,10.935-10.935,28.663,0,39.598 c10.935,10.935,28.663,10.935,39.598,0C58.734,36.864,58.734,19.136,47.799,8.201z M32.95,32.95c-2.734,2.734-7.166,2.734-9.899,0 c-2.734-2.734-2.734-7.166,0-9.899s7.166-2.734,9.899,0S35.683,30.216,32.95,32.95z'/%3E%3Cpath style='fill:%23E7ECED;' d='M35.778,20.222c-4.296-4.296-11.261-4.296-15.556,0c-4.296,4.296-4.296,11.261,0,15.556 c4.296,4.296,11.261,4.296,15.556,0C40.074,31.482,40.074,24.518,35.778,20.222z M30.121,30.121c-1.172,1.172-3.071,1.172-4.243,0 s-1.172-3.071,0-4.243s3.071-1.172,4.243,0S31.293,28.95,30.121,30.121z'/%3E%3Cg%3E%3Cpath style='fill:%23709fdc;' d='M35.778,35.778c-0.76,0.76-1.607,1.378-2.504,1.87l8.157,14.92c2.284-1.25,4.434-2.835,6.368-4.769 c1.934-1.934,3.519-4.084,4.769-6.368l-14.92-8.157C37.157,34.172,36.538,35.018,35.778,35.778z'/%3E%3Cpath style='fill:%23709fdc;' d='M20.222,20.222c0.76-0.76,1.607-1.378,2.504-1.87l-8.157-14.92c-2.284,1.25-4.434,2.835-6.368,4.769 s-3.519,4.084-4.769,6.368l14.92,8.157C18.843,21.828,19.462,20.982,20.222,20.222z'/%3E%3C/g%3E%3C/svg%3E");
         }
         .track-img{
           filter: opacity(70%);
         }
       }
     .track-img{
-      width: 90px;
-      border-radius: calc( #{$border-radius} - 10px);
+      width: 5.625rem;
+      border-radius: calc( #{$border-radius} - 0.625rem);
     }
     
         .track-discr{
-          margin-left: 15px;
+          margin-left: 0.9375rem;
           display: flex;
           flex-direction: column;
-          min-width: 190px;
+          min-width: 11.875rem;
           .track-name{
-            font-size: 17px;
-            margin-top: 8px;
+            font-size: 1.0625rem;
+            margin-top: 0.5rem;
           }
           .track-author{
-            margin-top: 8px;
+            margin-top: 0.5rem;
             font-weight: 300;
             color: $primary;
           }
         }
 
         .track-duration{
-          min-width: 40px;
-          margin-left: 10px;
-          margin-right: 10px;
+          min-width: 2.5rem;
+          margin-left: 0.625rem;
+          margin-right: 0.625rem;
           font-weight: 500;
-          margin-top:-14px;
+          margin-top:-1.3rem;
         }
       }
     }
@@ -260,10 +260,10 @@ body{
   color: $base;
   top: 3%;
   right: 2%;
-  font-size: 38px;
+  font-size: 2.375rem;
 }
 .fa-instagram:hover{
-  font-size: 42px;
+  font-size: 2.625rem;
   color: $white;
   transition: all .1s linear;
   cursor: pointer;
@@ -272,12 +272,12 @@ body{
 
 
 .play-list::-webkit-scrollbar {
-    width: 5px;
+    width: 0.3125rem;
 }
 
 .play-list::-webkit-scrollbar-thumb {
   background: $white; 
-  border-radius: 5px;
+  border-radius: 0.3125rem;
 }
 
 .play-list::-webkit-scrollbar-track {
