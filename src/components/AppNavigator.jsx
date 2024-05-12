@@ -5,11 +5,11 @@ import himori from "../assets/Himori.png";
 import orangeButton from "../assets/button.png";
 import pixelMagic from "../assets/pixelmagic.png";
 import coupleGoals from "../assets/couple-goals.png";
+import twilightEnd from "../assets/twilights-end-3d.png";
 import minimize from "../assets/minimize.png";
 import close from "../assets/close.png";
 import vaporwaveStatue from "../assets/statue-vaporwave.gif";
 import CardProfile from "./CardProfile";
-import Keyboard from "../assets/keyboard.png";
 import ReactIcon from "../assets/circular/react.png";
 import GithubLogo from "../assets/circular/github-logo.png";
 import Javascript from "../assets/circular/javascript.png";
@@ -40,6 +40,21 @@ const AppNavigator = () => {
 
   const [contact, setContact] = useState(true);
   const [closeContact, setCloseContact] = useState(false);
+
+  const playCoupleGoalsDemoVideo = () => {
+    return (
+      <div style={{position:"absolute"}}><iframe
+      width="560" height="315"
+      src="https://www.youtube.com/embed/mIRTlowfscw?si=OitLOI_07zSmKciR"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    /></div>
+      
+    );
+  };
 
   return (
     <div
@@ -628,8 +643,15 @@ const AppNavigator = () => {
                     : { display: "none" }
                 }
               >
-                <div style={{marginBottom:"10px", display:"flex", flexDirection:"row"}}>
-                <a href="https://github.com/shermainelim/CoupleGoalsApp">
+                <div
+                  style={{
+                    marginBottom: "10px",
+                    display: "flex",
+                    flexDirection: "row",
+                  }}
+                >
+                  <a  href="https://github.com/shermainelim/CoupleGoalsApp"
+                        style={{ textDecoration: "none", color: "white" }}>
                   <img
                     style={
                       portfolio
@@ -644,270 +666,277 @@ const AppNavigator = () => {
                     }
                     src={coupleGoals}
                     alt="couple-goals"
-                  ></img>
-                </a> 
-              <div style={{ padding: "0.625rem", textAlign: "left" }}> 
-                 <div
-                    style={
-                      portfolio
-                        ? {
-                            color: "white",
-                            fontSize: "1.5rem",
-                            fontFamily: "sans-serif",
-                            fontWeight: 200,
-                            marginTop: "0.625rem",
-                            marginLeft: "0.625rem",
-                          }
-                        : { display: "none" }
-                    }
-                  >
-                    <a
-                      href="https://github.com/shermainelim/CoupleGoalsApp"
-                      style={{ textDecoration: "none", color: "white" }}
+                  />
+           </a>
+
+                  <div style={{ padding: "0.625rem", textAlign: "left" }}>
+                    <div
+                      style={
+                        portfolio
+                          ? {
+                              color: "white",
+                              fontSize: "1.5rem",
+                              fontFamily: "sans-serif",
+                              fontWeight: 200,
+                              marginTop: "0.625rem",
+                              marginLeft: "0.625rem",
+                            }
+                          : { display: "none" }
+                      }
                     >
-                      Couple Goals App
-                    </a>
-                  </div> 
-                   <div
-                    style={
-                      portfolio || closePortfolio
-                        ? {
-                            color: "white",
-                            textAlign: "left",
-                            fontSize: "1rem",
-                            fontFamily: "sans-serif",
-                            fontWeight: 200,
-                            marginTop: "1.25rem",
-                            marginLeft: "0.625rem",
-                          }
-                        : { display: "none" }
-                    }
-                  >
-                    Tech Stack : React, NodeJS, Redux Toolkit, MySQL & GitLab DevOps Pipleline <br />
-                    <br />
-                    A goal setting app that allows couples to set and track shared goals, such as saving money for house, vacation, starting a business or learning a new language. The app includes features like unique couple board space, synchronized progress and finance trackers.
-
-
-                  </div> 
-                </div></div>
-
-
-
-
-                <div style={{marginBottom:"10px",display:"flex", flexDirection:"row"}}>
-                <a href="https://itch.io">
-                  <img
-                    style={
-                      portfolio
-                        ? {
-                            width: "9.375rem",
-                            height: "9.375rem",
-                            marginTop: "1.25rem",
-                            marginLeft: "0.9375rem",
-                            marginRight: "0.3125rem",
-                          }
-                        : { display: "none" }
-                    }
-                    src={pixelMagic}
-                    alt="pixel-magic"
-                  ></img>
-                </a> 
-                <div style={{ padding: "0.625rem", textAlign: "left" }}>
-                  <div
-                    style={
-                      portfolio
-                        ? {
-                            color: "white",
-                            fontSize: "1.5rem",
-                            fontFamily: "sans-serif",
-                            fontWeight: 200,
-                            marginTop: "0.625rem",
-                            marginLeft: "0.625rem",
-                          }
-                        : { display: "none" }
-                    }
-                  >
-                    <a
-                      href="https://itch.io"
-                      style={{ textDecoration: "none", color: "white" }}
+                      <a
+                        href="https://github.com/shermainelim/CoupleGoalsApp"
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        Couple Goals App
+                      </a>
+                    </div>
+                    <div
+                      style={
+                        portfolio || closePortfolio
+                          ? {
+                              color: "white",
+                              textAlign: "left",
+                              fontSize: "1rem",
+                              fontFamily: "sans-serif",
+                              fontWeight: 200,
+                              marginTop: "1.25rem",
+                              marginLeft: "0.625rem",
+                            }
+                          : { display: "none" }
+                      }
                     >
-                      Pixel RPG Game
-                    </a>
-                  </div> 
-            <div
-                    style={
-                      portfolio || closePortfolio
-                        ? {
-                            color: "white",
-                            textAlign: "left",
-                            fontSize: "1rem",
-                            fontFamily: "sans-serif",
-                            fontWeight: 200,
-                            marginTop: "1.25rem",
-                            marginLeft: "0.625rem",
-                          }
-                        : { display: "none" }
-                    }
-                  >
-                    I made this game with Unity and C# programming language. It
-                    is free to play on Itch.io. <br />
-                    <br />
-                    This is a relaxing game with beautiful pixel art. You are a
-                    student who has become disillusioned with life after a
-                    series of unfortunate events. One day you fall asleep and
-                    find yourself in a forest. To wake up, you must find
-                    <br />
-                    the events in the map. By the end of the game , you would
-                    have achieved self love and inner peace.{" "}
+                      Tech Stack : React, NodeJS, Redux Toolkit, MySQL & GitLab
+                      DevOps Pipleline <br />
+                      <br />A goal setting app that allows couples to set and
+                      track shared goals, such as saving money for house,
+                      vacation, starting a business or learning a new language.
+                      The app includes features like unique couple board space,
+                      synchronized progress and finance trackers.
+                    </div>
                   </div>
-          </div></div>
+                </div>
 
-
-
-
-          <div style={{marginBottom:"10px",display:"flex", flexDirection:"row"}}>
-                <a href="https://itch.io">
-                  <img
-                    style={
-                      portfolio
-                        ? {
-                            width: "9.375rem",
-                            height: "9.375rem",
-                            marginTop: "1.25rem",
-                            marginLeft: "0.9375rem",
-                            marginRight: "0.3125rem",
-                          }
-                        : { display: "none" }
-                    }
-                    src={pixelMagic}
-                    alt="pixel-magic"
-                  ></img>
-                </a> 
-                <div style={{ padding: "0.625rem", textAlign: "left" }}>
-                  <div
-                    style={
-                      portfolio
-                        ? {
-                            color: "white",
-                            fontSize: "1.5rem",
-                            fontFamily: "sans-serif",
-                            fontWeight: 200,
-                            marginTop: "0.625rem",
-                            marginLeft: "0.625rem",
-                          }
-                        : { display: "none" }
-                    }
-                  >
-                    <a
-                      href="https://itch.io"
-                      style={{ textDecoration: "none", color: "white" }}
+                <div
+                  style={{
+                    marginBottom: "10px",
+                    display: "flex",
+                    flexDirection: "row",
+                  }}
+                >
+                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7194014025083424769/">
+                    <img
+                      style={
+                        portfolio
+                          ? {
+                              width: "9.375rem",
+                              height: "9.375rem",
+                              marginTop: "1.25rem",
+                              marginLeft: "0.9375rem",
+                              marginRight: "0.3125rem",
+                            }
+                          : { display: "none" }
+                      }
+                      src={twilightEnd}
+                      alt="twilight-end"
+                    ></img>
+                  </a>
+                  <div style={{ padding: "0.625rem", textAlign: "left" }}>
+                    <div
+                      style={
+                        portfolio
+                          ? {
+                              color: "white",
+                              fontSize: "1.5rem",
+                              fontFamily: "sans-serif",
+                              fontWeight: 200,
+                              marginTop: "0.625rem",
+                              marginLeft: "0.625rem",
+                            }
+                          : { display: "none" }
+                      }
                     >
-                      Pixel RPG Game
-                    </a>
-                  </div> 
-            <div
-                    style={
-                      portfolio || closePortfolio
-                        ? {
-                            color: "white",
-                            textAlign: "left",
-                            fontSize: "1rem",
-                            fontFamily: "sans-serif",
-                            fontWeight: 200,
-                            marginTop: "1.25rem",
-                            marginLeft: "0.625rem",
-                          }
-                        : { display: "none" }
-                    }
-                  >
-                    I made this game with Unity and C# programming language. It
-                    is free to play on Itch.io. <br />
-                    <br />
-                    This is a relaxing game with beautiful pixel art. You are a
-                    student who has become disillusioned with life after a
-                    series of unfortunate events. One day you fall asleep and
-                    find yourself in a forest. To wake up, you must find
-                    <br />
-                    the events in the map. By the end of the game , you would
-                    have achieved self love and inner peace.{" "}
-                  </div>
-          </div></div>
-
-
-
-
-          <div style={{marginBottom:"10px",display:"flex", flexDirection:"row"}}>
-                <a href="https://itch.io">
-                  <img
-                    style={
-                      portfolio
-                        ? {
-                            width: "9.375rem",
-                            height: "9.375rem",
-                            marginTop: "1.25rem",
-                            marginLeft: "0.9375rem",
-                            marginRight: "0.3125rem",
-                          }
-                        : { display: "none" }
-                    }
-                    src={pixelMagic}
-                    alt="pixel-magic"
-                  ></img>
-                </a> 
-                <div style={{ padding: "0.625rem", textAlign: "left" }}>
-                  <div
-                    style={
-                      portfolio
-                        ? {
-                            color: "white",
-                            fontSize: "1.5rem",
-                            fontFamily: "sans-serif",
-                            fontWeight: 200,
-                            marginTop: "0.625rem",
-                            marginLeft: "0.625rem",
-                          }
-                        : { display: "none" }
-                    }
-                  >
-                    <a
-                      href="https://itch.io"
-                      style={{ textDecoration: "none", color: "white" }}
+                      <a
+                        href="https://www.linkedin.com/feed/update/urn:li:activity:7194014025083424769/"
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        Twilight's End
+                      </a>
+                    </div>
+                    <div
+                      style={
+                        portfolio || closePortfolio
+                          ? {
+                              color: "white",
+                              textAlign: "left",
+                              fontSize: "1rem",
+                              fontFamily: "sans-serif",
+                              fontWeight: 200,
+                              marginTop: "1.25rem",
+                              marginLeft: "0.625rem",
+                            }
+                          : { display: "none" }
+                      }
                     >
-                      Pixel RPG Game
-                    </a>
-                  </div> 
-            <div
-                    style={
-                      portfolio || closePortfolio
-                        ? {
-                            color: "white",
-                            textAlign: "left",
-                            fontSize: "1rem",
-                            fontFamily: "sans-serif",
-                            fontWeight: 200,
-                            marginTop: "1.25rem",
-                            marginLeft: "0.625rem",
-                          }
-                        : { display: "none" }
-                    }
-                  >
-                    I made this game with Unity and C# programming language. It
-                    is free to play on Itch.io. <br />
-                    <br />
-                    This is a relaxing game with beautiful pixel art. You are a
-                    student who has become disillusioned with life after a
-                    series of unfortunate events. One day you fall asleep and
-                    find yourself in a forest. To wake up, you must find
-                    <br />
-                    the events in the map. By the end of the game , you would
-                    have achieved self love and inner peace.{" "}
+                      Tech Stack : C# and Unity Engine <br />
+                      <br />
+                      This is a team project under Video Game Design and Programming module in my masters program. My team and I learnt how to create AI states on enemies, NPCs, game logic , 3D animation , modelling, audio theory and so on etc. 
+                      <br/>Story: A hybrid vampire and human hero is hired to rid sun blob enemies that have invaded the Land of Vampara. Pure vampires cannot be in contact with the sunlight and live in Vampara with eternal crimson nights. 
+                   
+                    </div>
                   </div>
-          </div></div>
-   
+                </div>
+
+                <div
+                  style={{
+                    marginBottom: "10px",
+                    display: "flex",
+                    flexDirection: "row",
+                  }}
+                >
+                  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7194014025083424769/">
+                    <img
+                      style={
+                        portfolio
+                          ? {
+                              width: "9.375rem",
+                              height: "9.375rem",
+                              marginTop: "1.25rem",
+                              marginLeft: "0.9375rem",
+                              marginRight: "0.3125rem",
+                            }
+                          : { display: "none" }
+                      }
+                      src={pixelMagic}
+                      alt="pixel-magic"
+                    ></img>
+                  </a>
+                  <div style={{ padding: "0.625rem", textAlign: "left" }}>
+                    <div
+                      style={
+                        portfolio
+                          ? {
+                              color: "white",
+                              fontSize: "1.5rem",
+                              fontFamily: "sans-serif",
+                              fontWeight: 200,
+                              marginTop: "0.625rem",
+                              marginLeft: "0.625rem",
+                            }
+                          : { display: "none" }
+                      }
+                    >
+                      <a
+                        href="https://itch.io"
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        Pixel RPG Game
+                      </a>
+                    </div>
+                    <div
+                      style={
+                        portfolio || closePortfolio
+                          ? {
+                              color: "white",
+                              textAlign: "left",
+                              fontSize: "1rem",
+                              fontFamily: "sans-serif",
+                              fontWeight: 200,
+                              marginTop: "1.25rem",
+                              marginLeft: "0.625rem",
+                            }
+                          : { display: "none" }
+                      }
+                    >
+                      I made this game with Unity and C# programming language.
+                      It is free to play on Itch.io. <br />
+                      <br />
+                      This is a relaxing game with beautiful pixel art. You are
+                      a student who has become disillusioned with life after a
+                      series of unfortunate events. One day you fall asleep and
+                      find yourself in a forest. To wake up, you must find
+                      <br />
+                      the events in the map. By the end of the game , you would
+                      have achieved self love and inner peace.{" "}
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    marginBottom: "10px",
+                    display: "flex",
+                    flexDirection: "row",
+                  }}
+                >
+                  <a href="https://itch.io">
+                    <img
+                      style={
+                        portfolio
+                          ? {
+                              width: "9.375rem",
+                              height: "9.375rem",
+                              marginTop: "1.25rem",
+                              marginLeft: "0.9375rem",
+                              marginRight: "0.3125rem",
+                            }
+                          : { display: "none" }
+                      }
+                      src={pixelMagic}
+                      alt="pixel-magic"
+                    ></img>
+                  </a>
+                  <div style={{ padding: "0.625rem", textAlign: "left" }}>
+                    <div
+                      style={
+                        portfolio
+                          ? {
+                              color: "white",
+                              fontSize: "1.5rem",
+                              fontFamily: "sans-serif",
+                              fontWeight: 200,
+                              marginTop: "0.625rem",
+                              marginLeft: "0.625rem",
+                            }
+                          : { display: "none" }
+                      }
+                    >
+                      <a
+                        href="https://itch.io"
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        Pixel RPG Game
+                      </a>
+                    </div>
+                    <div
+                      style={
+                        portfolio || closePortfolio
+                          ? {
+                              color: "white",
+                              textAlign: "left",
+                              fontSize: "1rem",
+                              fontFamily: "sans-serif",
+                              fontWeight: 200,
+                              marginTop: "1.25rem",
+                              marginLeft: "0.625rem",
+                            }
+                          : { display: "none" }
+                      }
+                    >
+                      I made this game with Unity and C# programming language.
+                      It is free to play on Itch.io. <br />
+                      <br />
+                      This is a relaxing game with beautiful pixel art. You are
+                      a student who has become disillusioned with life after a
+                      series of unfortunate events. One day you fall asleep and
+                      find yourself in a forest. To wake up, you must find
+                      <br />
+                      the events in the map. By the end of the game , you would
+                      have achieved self love and inner peace.{" "}
+                    </div>
+                  </div>
+                </div>
               </div>
-
-
-              
             </div>
           </div>
         </div>
