@@ -299,30 +299,174 @@
       }
     }
 
-    .portfolio-container{
-        display: flex;
-        flex-direction: column;
+    .portfolio-container {
+      display: flex;
+      flex-direction: column;
 
-        .border-portfolio-open{
-            border: 0.0625rem solid white;
-            background-color: #ff9933;
-            width: 62.5rem;
-            height: 775px;
-        }
-    
-        .border-portfolio-closed{
-            border: 0.0625rem solid white;
-            background-color: #ff9933;
-            width: 62.5rem;
-            height: 2.1875rem;
+      .border-portfolio-open {
+        border: 0.0625rem solid white;
+        background-color: #ff9933;
+        width: 62.5rem;
+        height: 775px;
+
+        .label-container {
+          display: flex;
+
+          .label {
+            color: white;
+            margin-top: 0.375rem;
+            margin-left: 0.4375rem;
+            font-size: 1rem;
+          }
+
+          .minimize-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-top: 0.3125rem;
+            margin-left: 50.73rem;
+          }
+          .close-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-top: 0.3125rem;
+            margin-left: 0.3125rem;
+          }
         }
 
-        .portfolio-none{
-            display: none;
+        .portfolio-accordion-filler-open {
+          margin-top: 0.625rem;
+          width: 62.5rem;
+          height: 725px;
+          background-color: black;
+          color: white;
+          display: flex;
+          flex-direction: column;
+
+          .project-image-container {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+
+            .link {
+              text-decoration: none;
+              color: white;
+
+              .image-show {
+                width: 9.375rem;
+                height: 9.375rem;
+                margin-top: 1.25rem;
+                margin-left: 0.9375rem;
+                margin-right: 0.3125rem;
+              }
+              .image-none {
+                display: none;
+              }
+
+              .image-pastel-dreams-show {
+                width: 9.375rem;
+                height: 6.8rem;
+                margin-top: 1.25rem;
+                margin-left: 0.9375rem;
+                margin-right: 0.3125rem;
+              }
+              .image-pastel-dreams-none {
+                display: none;
+              }
+            }
+          }
+
+          .project-desc-container {
+            padding: 0.625rem;
+            text-align: left;
+
+            .desc-title-show {
+              color: white;
+              font-size: 1.5rem;
+              font-family: sans-serif;
+              font-weight: 200;
+              margin-top: 0.625rem;
+              margin-left: 0.625rem;
+
+              .title-label {
+                text-decoration: none;
+                color: white;
+              }
+            }
+
+            .desc-title-none {
+              display: none;
+            }
+
+            .desc-subtitle-show {
+              color: white;
+              text-align: left;
+              font-size: 1rem;
+              font-family: sans-serif;
+              font-weight: 200;
+              margin-top: 1.25rem;
+              margin-left: 0.625rem;
+            }
+
+            .desc-subtitle-none {
+              display: none;
+            }
+          }
         }
+
+        .portfolio-accordion-filler-closed {
+          display: none;
+        }
+      }
+
+      .border-portfolio-closed {
+        border: 0.0625rem solid white;
+        background-color: #ff9933;
+        width: 62.5rem;
+        height: 2.1875rem;
+
+        .label-container {
+          display: flex;
+
+          .label {
+            color: white;
+            margin-top: 0.375rem;
+            margin-left: 0.4375rem;
+            font-size: 1rem;
+          }
+
+          .minimize-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-top: 0.3125rem;
+            margin-left: 50.73rem;
+          }
+          .close-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-top: 0.3125rem;
+            margin-left: 0.3125rem;
+          }
+        }
+
+        .portfolio-accordion-filler-open {
+          margin-top: 0.625rem;
+          width: 62.5rem;
+          height: 725px;
+          background-color: black;
+          color: white;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .portfolio-accordion-filler-closed {
+          display: none;
+        }
+      }
+
+      .portfolio-none {
+        display: none;
+      }
     }
-
-   
   }
 
   .accordion-third-section-container {

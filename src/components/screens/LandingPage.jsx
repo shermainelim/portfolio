@@ -218,36 +218,27 @@ const LandingPage = () => {
     return (
       <div style={closeMusic ? { display: "none" } : null}>
         <div
-        className={
-          music
-            ? cx("border-music-open")
-            : cx("border-music-closed")
-        }
-         
+          className={
+            music ? cx("border-music-open") : cx("border-music-closed")
+          }
         >
-          <div  className={cx("label-container")}>
-            <div
-               className={cx("label")}
-            >
-              MUSIC.EXE
-            </div>
+          <div className={cx("label-container")}>
+            <div className={cx("label")}>MUSIC.EXE</div>
             <img
-             className={cx("minimize-icon")}
-              
+              className={cx("minimize-icon")}
               src={minimize}
               alt="minimize"
               onClick={() => setMusic(!music)}
             ></img>
             <img
-            className={cx("close-icon")}
-              
+              className={cx("close-icon")}
               src={close}
               alt="close"
               onClick={() => setCloseMusic(!closeMusic)}
             ></img>
           </div>
           <img
-            className={music?cx("music-img-show"):cx("music-img-none")}
+            className={music ? cx("music-img-show") : cx("music-img-none")}
             src={tech}
             alt="tech-music-player"
           ></img>
@@ -259,141 +250,70 @@ const LandingPage = () => {
 
   const renderPortfolio = () => {
     return (
-      <div  className={cx("portfolio-container")}>
+      <div className={cx("portfolio-container")}>
         <div
-
-className={!closePortfolio?portfolio?cx("border-portfolio-open"):cx("border-portfolio-closed"):cx("portfolio-none")}
-          style={
+          className={
             !closePortfolio
               ? portfolio
-                ? {
-                    border: "0.0625rem solid white",
-                    backgroundColor: "rgb(255 161 61)",
-                    width: "62.5rem",
-                    height: "775px",
-                  }
-                : {
-                    border: "0.0625rem solid white",
-                    backgroundColor: "rgb(255 161 61)",
-                    width: "62.5rem",
-                    height: "2.1875rem",
-                  }
-              : { display: "none" }
+                ? cx("border-portfolio-open")
+                : cx("border-portfolio-closed")
+              : cx("portfolio-none")
           }
         >
-          <div style={{ display: "flex" }}>
-            <div
-              style={{
-                color: "white",
-                marginTop: "0.375rem",
-                marginLeft: "0.4375rem",
-                fontSize: "1rem",
-              }}
-              id="portfolio"
-            >
+          <div className={cx("label-container")}>
+            <div className={cx("label")} id="portfolio">
               PORTFOLIO.PNG
             </div>
             <img
-              style={{
-                width: "1.25rem",
-                height: "1.25rem",
-                marginTop: "0.3125rem",
-                marginLeft: "50.73rem",
-              }}
+              className={cx("minimize-icon")}
               src={minimize}
               alt="minimize"
               onClick={() => setPortfolio(!portfolio)}
             ></img>{" "}
             <img
-              style={{
-                width: "1.25rem",
-                height: "1.25rem",
-                marginTop: "0.3125rem",
-                marginLeft: "0.3125rem",
-              }}
+              className={cx("close-icon")}
               src={close}
               alt="close"
               onClick={() => setClosePortfolio(!closePortfolio)}
             ></img>
           </div>
           <div
-            style={
+            className={
               portfolio
-                ? {
-                    marginTop: "0.625rem",
-                    width: "62.5rem",
-                    height: "725px",
-                    backgroundColor: "black",
-                    color: "white",
-                    display: "flex",
-                    flexDirection: "column",
-                  }
-                : { display: "none" }
+                ? cx("portfolio-accordion-filler-open")
+                : cx("portfolio-accordion-filler-closed")
             }
           >
-            <div
-              style={{
-                marginBottom: "10px",
-                display: "flex",
-                flexDirection: "row",
-              }}
-            >
+            <div className={cx("project-image-container")}>
               <a
                 href="https://github.com/shermainelim/CoupleGoalsApp"
-                style={{ textDecoration: "none", color: "white" }}
+                className={cx("link")}
               >
                 <img
-                  style={
-                    portfolio
-                      ? {
-                          width: "9.375rem",
-                          height: "9.375rem",
-                          marginTop: "1.25rem",
-                          marginLeft: "0.9375rem",
-                          marginRight: "0.3125rem",
-                        }
-                      : { display: "none" }
-                  }
+                  className={portfolio ? cx("image-show") : cx("image-none")}
                   src={coupleGoals}
                   alt="couple-goals"
                 />
               </a>
 
-              <div style={{ padding: "0.625rem", textAlign: "left" }}>
+              <div className={cx("project-desc-container")}>
                 <div
-                  style={
-                    portfolio
-                      ? {
-                          color: "white",
-                          fontSize: "1.5rem",
-                          fontFamily: "sans-serif",
-                          fontWeight: 200,
-                          marginTop: "0.625rem",
-                          marginLeft: "0.625rem",
-                        }
-                      : { display: "none" }
+                  className={
+                    portfolio ? cx("desc-title-show") : cx("desc-title-none")
                   }
                 >
                   <a
                     href="https://github.com/shermainelim/CoupleGoalsApp"
-                    style={{ textDecoration: "none", color: "white" }}
+                    className={cx("title-label")}
                   >
                     Couple Goals App
                   </a>
                 </div>
                 <div
-                  style={
+                  className={
                     portfolio || closePortfolio
-                      ? {
-                          color: "white",
-                          textAlign: "left",
-                          fontSize: "1rem",
-                          fontFamily: "sans-serif",
-                          fontWeight: 200,
-                          marginTop: "1.25rem",
-                          marginLeft: "0.625rem",
-                        }
-                      : { display: "none" }
+                      ? cx("desc-subtitle-show")
+                      : cx("desc-subtitle-none")
                   }
                 >
                   Tech Stack : React, NodeJS, Redux Toolkit, MySQL & GitLab
@@ -407,65 +327,35 @@ className={!closePortfolio?portfolio?cx("border-portfolio-open"):cx("border-port
               </div>
             </div>
 
-            <div
-              style={{
-                marginBottom: "10px",
-                display: "flex",
-                flexDirection: "row",
-              }}
-            >
-              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7194014025083424769/">
+            <div className={cx("project-image-container")}>
+              <a
+                href="https://www.linkedin.com/feed/update/urn:li:activity:7194014025083424769/"
+                className={cx("link")}
+              >
                 <img
-                  style={
-                    portfolio
-                      ? {
-                          width: "9.375rem",
-                          height: "9.375rem",
-                          marginTop: "1.25rem",
-                          marginLeft: "0.9375rem",
-                          marginRight: "0.3125rem",
-                        }
-                      : { display: "none" }
-                  }
+                  className={portfolio ? cx("image-show") : cx("image-none")}
                   src={twilightEnd}
                   alt="twilight-end"
                 ></img>
               </a>
-              <div style={{ padding: "0.625rem", textAlign: "left" }}>
+              <div className={cx("project-desc-container")}>
                 <div
-                  style={
-                    portfolio
-                      ? {
-                          color: "white",
-                          fontSize: "1.5rem",
-                          fontFamily: "sans-serif",
-                          fontWeight: 200,
-                          marginTop: "0.625rem",
-                          marginLeft: "0.625rem",
-                        }
-                      : { display: "none" }
+                  className={
+                    portfolio ? cx("desc-title-show") : cx("desc-title-none")
                   }
                 >
                   <a
                     href="https://www.linkedin.com/feed/update/urn:li:activity:7194014025083424769/"
-                    style={{ textDecoration: "none", color: "white" }}
+                    className={cx("title-label")}
                   >
                     Twilight's End
                   </a>
                 </div>
                 <div
-                  style={
+                  className={
                     portfolio || closePortfolio
-                      ? {
-                          color: "white",
-                          textAlign: "left",
-                          fontSize: "1rem",
-                          fontFamily: "sans-serif",
-                          fontWeight: 200,
-                          marginTop: "1.25rem",
-                          marginLeft: "0.625rem",
-                        }
-                      : { display: "none" }
+                      ? cx("desc-subtitle-show")
+                      : cx("desc-subtitle-none")
                   }
                 >
                   Tech Stack : C# and Unity Engine <br />
@@ -483,65 +373,35 @@ className={!closePortfolio?portfolio?cx("border-portfolio-open"):cx("border-port
               </div>
             </div>
 
-            <div
-              style={{
-                marginBottom: "10px",
-                display: "flex",
-                flexDirection: "row",
-              }}
-            >
-              <a href="https://github.com/shermainelim/Logic-University-Stationery-Inventory-System">
+            <div className={cx("project-image-container")}>
+              <a
+                href="https://github.com/shermainelim/Logic-University-Stationery-Inventory-System"
+                className={cx("link")}
+              >
                 <img
-                  style={
-                    portfolio
-                      ? {
-                          width: "9.375rem",
-                          height: "9.375rem",
-                          marginTop: "1.25rem",
-                          marginLeft: "0.9375rem",
-                          marginRight: "0.3125rem",
-                        }
-                      : { display: "none" }
-                  }
+                  className={portfolio ? cx("image-show") : cx("image-none")}
                   src={logicUniversity}
                   alt="logic-university"
                 ></img>
               </a>
-              <div style={{ padding: "0.625rem", textAlign: "left" }}>
+              <div className={cx("project-desc-container")}>
                 <div
-                  style={
-                    portfolio
-                      ? {
-                          color: "white",
-                          fontSize: "1.5rem",
-                          fontFamily: "sans-serif",
-                          fontWeight: 200,
-                          marginTop: "0.625rem",
-                          marginLeft: "0.625rem",
-                        }
-                      : { display: "none" }
+                  className={
+                    portfolio ? cx("desc-title-show") : cx("desc-title-none")
                   }
                 >
                   <a
                     href="https://github.com/shermainelim/Logic-University-Stationery-Inventory-System"
-                    style={{ textDecoration: "none", color: "white" }}
+                    className={cx("title-label")}
                   >
                     Stationery Logistics Inventory System
                   </a>
                 </div>
                 <div
-                  style={
+                  className={
                     portfolio || closePortfolio
-                      ? {
-                          color: "white",
-                          textAlign: "left",
-                          fontSize: "1rem",
-                          fontFamily: "sans-serif",
-                          fontWeight: 200,
-                          marginTop: "1.25rem",
-                          marginLeft: "0.625rem",
-                        }
-                      : { display: "none" }
+                      ? cx("desc-subtitle-show")
+                      : cx("desc-subtitle-none")
                   }
                 >
                   Tech Stack: C# ASP.NET Core & Azure Machine Learning <br />
@@ -556,65 +416,39 @@ className={!closePortfolio?portfolio?cx("border-portfolio-open"):cx("border-port
               </div>
             </div>
 
-            <div
-              style={{
-                marginBottom: "10px",
-                display: "flex",
-                flexDirection: "row",
-              }}
-            >
-              <a href="https://pastelwithdreams.netlify.app/">
+            <div className={cx("project-image-container")}>
+              <a
+                href="https://pastelwithdreams.netlify.app/"
+                className={cx("link")}
+              >
                 <img
-                  style={
+                  className={
                     portfolio
-                      ? {
-                          width: "9.375rem",
-                          height: "110px",
-                          marginTop: "1.25rem",
-                          marginLeft: "0.9375rem",
-                          marginRight: "0.3125rem",
-                        }
-                      : { display: "none" }
+                      ? cx("image-pastel-dreams-show")
+                      : cx("image-pastel-dreams-none")
                   }
                   src={pastelDreams}
                   alt="pastel-dreams"
                 ></img>
               </a>
-              <div style={{ padding: "0.625rem", textAlign: "left" }}>
+              <div className={cx("project-desc-container")}>
                 <div
-                  style={
-                    portfolio
-                      ? {
-                          color: "white",
-                          fontSize: "1.5rem",
-                          fontFamily: "sans-serif",
-                          fontWeight: 200,
-                          marginTop: "0.625rem",
-                          marginLeft: "0.625rem",
-                        }
-                      : { display: "none" }
+                  className={
+                    portfolio ? cx("desc-title-show") : cx("desc-title-none")
                   }
                 >
                   <a
                     href="https://pastelwithdreams.netlify.app/"
-                    style={{ textDecoration: "none", color: "white" }}
+                    className={cx("title-label")}
                   >
                     JavaScript Aesthetic Portfolio
                   </a>
                 </div>
                 <div
-                  style={
+                  className={
                     portfolio || closePortfolio
-                      ? {
-                          color: "white",
-                          textAlign: "left",
-                          fontSize: "1rem",
-                          fontFamily: "sans-serif",
-                          fontWeight: 200,
-                          marginTop: "1.25rem",
-                          marginLeft: "0.625rem",
-                        }
-                      : { display: "none" }
+                      ? cx("desc-subtitle-show")
+                      : cx("desc-subtitle-none")
                   }
                 >
                   Tech Stack: Vanilla JavaScript <br />
@@ -629,299 +463,299 @@ className={!closePortfolio?portfolio?cx("border-portfolio-open"):cx("border-port
     );
   };
 
-  const renderSkills=()=>{
-    return( <div
-      style={
-        closeSkills ? { display: "none" } : { marginLeft: "1.375rem" }
-      }
-    >
+  const renderSkills = () => {
+    return (
       <div
-        style={
-          skills
-            ? {
-                border: "0.0625rem solid white",
-                backgroundColor: "rgb(255 161 61)",
-                width: "15.625rem",
-                height: "12.8125rem",
-
-                marginRight: "1.875rem",
-              }
-            : {
-                border: "0.0625rem solid white",
-                backgroundColor: "rgb(255 161 61)",
-                width: "15.625rem",
-                height: "2.1875rem",
-
-                marginRight: "1.875rem",
-              }
-        }
+        style={closeSkills ? { display: "none" } : { marginLeft: "1.375rem" }}
       >
-        <div style={{ display: "flex", flexDirection: "row" }}>
-          <div
-            style={{
-              color: "white",
-              marginTop: "0.375rem",
-              marginLeft: "0.4375rem",
-              fontSize: "1rem",
-            }}
-            id="skills"
-          >
-            SKILLS.PNG
-          </div>
-          <img
-            style={{
-              width: "1.25rem",
-              height: "1.25rem",
-              marginTop: "0.3125rem",
-              marginLeft: "6.25rem",
-            }}
-            src={minimize}
-            alt="minimize"
-            onClick={() => setSkills(!skills)}
-          ></img>{" "}
-          <img
-            style={{
-              width: "1.25rem",
-              height: "1.25rem",
-              marginTop: "0.3125rem",
-              marginLeft: "0.3125rem",
-            }}
-            src={close}
-            alt="close"
-            onClick={() => {
-              setCloseSkills(!closeSkills);
-            }}
-          ></img>
-        </div>
         <div
           style={
             skills
-              ? { marginTop: "0.3125rem", backgroundColor: "black" }
-              : { display: "none" }
+              ? {
+                  border: "0.0625rem solid white",
+                  backgroundColor: "rgb(255 161 61)",
+                  width: "15.625rem",
+                  height: "12.8125rem",
+
+                  marginRight: "1.875rem",
+                }
+              : {
+                  border: "0.0625rem solid white",
+                  backgroundColor: "rgb(255 161 61)",
+                  width: "15.625rem",
+                  height: "2.1875rem",
+
+                  marginRight: "1.875rem",
+                }
           }
         >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              padding: "0.625rem",
-              justifyContent: "center",
-            }}
-          >
-            <img
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <div
               style={{
-                marginTop: "0.1875rem",
-                width: "4.375rem",
-                height: "4.375rem",
+                color: "white",
+                marginTop: "0.375rem",
+                marginLeft: "0.4375rem",
+                fontSize: "1rem",
               }}
-              src={ReactIcon}
-              alt="react-icon"
-            ></img>{" "}
+              id="skills"
+            >
+              SKILLS.PNG
+            </div>
             <img
               style={{
-                marginTop: "-0.1875rem",
-                width: "4.875rem",
-                height: "4.875rem",
-              }}
-              src={Javascript}
-              alt="javascript-icon"
-            ></img>{" "}
-            <img
-              style={{
+                width: "1.25rem",
+                height: "1.25rem",
                 marginTop: "0.3125rem",
-                width: "3.9375rem",
-                height: "3.9375rem",
+                marginLeft: "6.25rem",
               }}
-              src={AWS}
-              alt="aws-icon"
+              src={minimize}
+              alt="minimize"
+              onClick={() => setSkills(!skills)}
+            ></img>{" "}
+            <img
+              style={{
+                width: "1.25rem",
+                height: "1.25rem",
+                marginTop: "0.3125rem",
+                marginLeft: "0.3125rem",
+              }}
+              src={close}
+              alt="close"
+              onClick={() => {
+                setCloseSkills(!closeSkills);
+              }}
             ></img>
           </div>
-
           <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              padding: "0.625rem",
-              justifyContent: "center",
-              marginTop: "-1.25rem",
-            }}
+            style={
+              skills
+                ? { marginTop: "0.3125rem", backgroundColor: "black" }
+                : { display: "none" }
+            }
           >
-            <img
+            <div
               style={{
-                marginTop: "0.125rem",
-                width: "3.6875rem",
-                height: "3.6875rem",
-                marginRight: "0.625rem",
-                marginLeft: "0.625rem",
+                display: "flex",
+                flexDirection: "row",
+                padding: "0.625rem",
+                justifyContent: "center",
               }}
-              src={nodeJS}
-              alt="nodeJS-icon"
-            ></img>{" "}
-            <img
+            >
+              <img
+                style={{
+                  marginTop: "0.1875rem",
+                  width: "4.375rem",
+                  height: "4.375rem",
+                }}
+                src={ReactIcon}
+                alt="react-icon"
+              ></img>{" "}
+              <img
+                style={{
+                  marginTop: "-0.1875rem",
+                  width: "4.875rem",
+                  height: "4.875rem",
+                }}
+                src={Javascript}
+                alt="javascript-icon"
+              ></img>{" "}
+              <img
+                style={{
+                  marginTop: "0.3125rem",
+                  width: "3.9375rem",
+                  height: "3.9375rem",
+                }}
+                src={AWS}
+                alt="aws-icon"
+              ></img>
+            </div>
+
+            <div
               style={{
-                marginTop: "-0.125rem",
-                width: "4.0625rem",
-                height: "4.0625rem",
-                marginRight: "0.625rem",
+                display: "flex",
+                flexDirection: "row",
+                padding: "0.625rem",
+                justifyContent: "center",
+                marginTop: "-1.25rem",
               }}
-              src={Figma}
-              alt="figma-icon"
-            ></img>{" "}
-            <img
-              style={{
-                marginTop: "-0.0625rem",
-                width: "3.8125rem",
-                height: "3.8125rem",
-              }}
-              src={TypeScript}
-              alt="typescript-icon"
-            ></img>
+            >
+              <img
+                style={{
+                  marginTop: "0.125rem",
+                  width: "3.6875rem",
+                  height: "3.6875rem",
+                  marginRight: "0.625rem",
+                  marginLeft: "0.625rem",
+                }}
+                src={nodeJS}
+                alt="nodeJS-icon"
+              ></img>{" "}
+              <img
+                style={{
+                  marginTop: "-0.125rem",
+                  width: "4.0625rem",
+                  height: "4.0625rem",
+                  marginRight: "0.625rem",
+                }}
+                src={Figma}
+                alt="figma-icon"
+              ></img>{" "}
+              <img
+                style={{
+                  marginTop: "-0.0625rem",
+                  width: "3.8125rem",
+                  height: "3.8125rem",
+                }}
+                src={TypeScript}
+                alt="typescript-icon"
+              ></img>
+            </div>
           </div>
         </div>
       </div>
-    </div>)
-  }
+    );
+  };
 
-  const renderContact=()=>{
-    return(
+  const renderContact = () => {
+    return (
       <div style={closeContact ? { display: "none" } : null}>
+        <div
+          style={
+            contact
+              ? {
+                  border: "0.0625rem solid white",
+                  backgroundColor: "rgb(255 161 61)",
+                  width: "62.5rem",
+                  height: "12.8125rem",
+                }
+              : {
+                  border: "0.0625rem solid white",
+                  backgroundColor: "rgb(255 161 61)",
+                  width: "62.5rem",
+                  height: "2.1875rem",
+                }
+          }
+        >
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <div
+              style={{
+                color: "white",
+                marginTop: "0.375rem",
+                marginLeft: "0.4375rem",
+                fontSize: "1rem",
+              }}
+              id="contact"
+            >
+              CONTACT.PNG
+            </div>
+            <img
+              style={{
+                width: "1.25rem",
+                height: "1.25rem",
+                marginTop: "0.3125rem",
+                marginLeft: "51.875rem",
+              }}
+              src={minimize}
+              alt="minimize"
+              onClick={() => setContact(!contact)}
+            ></img>{" "}
+            <img
+              style={{
+                width: "1.25rem",
+                height: "1.25rem",
+                marginTop: "0.3125rem",
+                marginLeft: "0.3125rem",
+              }}
+              src={close}
+              alt="close"
+              onClick={() => setCloseContact(!closeContact)}
+            ></img>
+          </div>
+          <div>
             <div
               style={
                 contact
                   ? {
-                      border: "0.0625rem solid white",
-                      backgroundColor: "rgb(255 161 61)",
-                      width: "62.5rem",
-                      height: "12.8125rem",
+                      display: "flex",
+                      flexDirection: "row",
+                      padding: "0.625rem",
+                      justifyContent: "center",
+                      marginTop: "-1.25rem",
                     }
-                  : {
-                      border: "0.0625rem solid white",
-                      backgroundColor: "rgb(255 161 61)",
-                      width: "62.5rem",
-                      height: "2.1875rem",
-                    }
+                  : { display: "none" }
               }
             >
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                <div
-                  style={{
-                    color: "white",
-                    marginTop: "0.375rem",
-                    marginLeft: "0.4375rem",
-                    fontSize: "1rem",
-                  }}
-                  id="contact"
-                >
-                  CONTACT.PNG
-                </div>
-                <img
-                  style={{
-                    width: "1.25rem",
-                    height: "1.25rem",
-                    marginTop: "0.3125rem",
-                    marginLeft: "51.875rem",
-                  }}
-                  src={minimize}
-                  alt="minimize"
-                  onClick={() => setContact(!contact)}
-                ></img>{" "}
-                <img
-                  style={{
-                    width: "1.25rem",
-                    height: "1.25rem",
-                    marginTop: "0.3125rem",
-                    marginLeft: "0.3125rem",
-                  }}
-                  src={close}
-                  alt="close"
-                  onClick={() => setCloseContact(!closeContact)}
-                ></img>
-              </div>
-              <div>
-                <div
-                  style={
-                    contact
-                      ? {
-                          display: "flex",
-                          flexDirection: "row",
-                          padding: "0.625rem",
-                          justifyContent: "center",
-                          marginTop: "-1.25rem",
-                        }
-                      : { display: "none" }
-                  }
-                >
+              {" "}
+              <img
+                style={{
+                  marginTop: "1rem",
+                  paddingLeft: "1.25rem",
+                  paddingRight: "1.25rem",
+                  objectFit: "cover",
+                  objectPosition: "10% 60%",
+                  width: "62.5rem",
+                  height: "9.8125rem",
+                  position: "absolute",
+                }}
+                src={Waves}
+                alt="waves-icon"
+              ></img>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  position: "absolute",
+                  alignContent: "space-evenly",
+                  marginTop: "0.4375rem",
+                }}
+              >
+                {" "}
+                <a href="mailto:codeandcharm@gmail.com">
+                  <img
+                    style={{
+                      marginTop: "1.25rem",
+                      width: "8.125rem",
+                      height: "8.125rem",
+                      marginLeft: "11.875rem",
+                      marginRight: "9.375rem",
+                    }}
+                    src={Gmail}
+                    alt="Gmail-icon"
+                  ></img>{" "}
+                </a>
+                <a href="https://github.com">
                   {" "}
                   <img
                     style={{
-                      marginTop: "1rem",
-                      paddingLeft: "1.25rem",
-                      paddingRight: "1.25rem",
-                      objectFit: "cover",
-                      objectPosition: "10% 60%",
-                      width: "62.5rem",
-                      height: "9.8125rem",
-                      position: "absolute",
+                      marginTop: "1.25rem",
+                      width: "7.8125rem",
+                      height: "7.8125rem",
+                      marginRight: "9.375rem",
                     }}
-                    src={Waves}
-                    alt="waves-icon"
-                  ></img>
-                  <div
+                    src={GithubLogo}
+                    alt="github-icon"
+                  ></img>{" "}
+                </a>
+                <a href="https://linkedin.com">
+                  <img
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "center",
-                      position: "absolute",
-                      alignContent: "space-evenly",
-                      marginTop: "0.4375rem",
+                      marginTop: "1.25rem",
+                      width: "8.125rem",
+                      height: "8.125rem",
+                      marginRight: "9.375rem",
                     }}
-                  >
-                    {" "}
-                    <a href="mailto:codeandcharm@gmail.com">
-                      <img
-                        style={{
-                          marginTop: "1.25rem",
-                          width: "8.125rem",
-                          height: "8.125rem",
-                          marginLeft: "11.875rem",
-                          marginRight: "9.375rem",
-                        }}
-                        src={Gmail}
-                        alt="Gmail-icon"
-                      ></img>{" "}
-                    </a>
-                    <a href="https://github.com">
-                      {" "}
-                      <img
-                        style={{
-                          marginTop: "1.25rem",
-                          width: "7.8125rem",
-                          height: "7.8125rem",
-                          marginRight: "9.375rem",
-                        }}
-                        src={GithubLogo}
-                        alt="github-icon"
-                      ></img>{" "}
-                    </a>
-                    <a href="https://linkedin.com">
-                      <img
-                        style={{
-                          marginTop: "1.25rem",
-                          width: "8.125rem",
-                          height: "8.125rem",
-                          marginRight: "9.375rem",
-                        }}
-                        src={Linkedin}
-                        alt="linked-in-icon"
-                      ></img>
-                    </a>
-                  </div>
-                </div>
+                    src={Linkedin}
+                    alt="linked-in-icon"
+                  ></img>
+                </a>
               </div>
             </div>
           </div>
-    )
-  }
+        </div>
+      </div>
+    );
+  };
   return (
     <div className={cx("landing-page-main-container")}>
       <img className={cx("banner")} src={sciFi} alt="sciFi" />
@@ -934,18 +768,12 @@ className={!closePortfolio?portfolio?cx("border-portfolio-open"):cx("border-port
           {renderProfile()}
           {renderAbout()}
         </div>
-        <div
-        className={cx("accordion-second-section-container")}
-         
-        >
+        <div className={cx("accordion-second-section-container")}>
           {renderMusicPlayer()}
           {renderPortfolio()}
         </div>
-        <div
-          className={cx("accordion-third-section-container")}
-        
-        >
-         {renderSkills()}
+        <div className={cx("accordion-third-section-container")}>
+          {renderSkills()}
           {renderContact()}
         </div>
       </Router>
