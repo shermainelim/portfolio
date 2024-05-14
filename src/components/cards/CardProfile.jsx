@@ -16,9 +16,11 @@ class CardProfile extends React.Component {
     state = {
       index: 3,
       currentTime: '0:00',
-      musicList: [{name:'Radioactive', author: 'Waterflame', audio: radioActive, duration: '3.45'}, 
-{name:'Sky Fortress', author: 'Waterflame', audio:skyFortress, duration: '4.34'},
-        {name:'Moonbeam', author: 'Waterflame', audio:moonBeam, duration: '4.44'},        {name:'Techock', author: 'Waterflame',  audio:techock, duration: '2.33'},
+      musicList: [
+        {name:'Radioactive', author: 'Waterflame', audio: radioActive, duration: '3.45'}, 
+        {name:'Sky Fortress', author: 'Waterflame', audio:skyFortress, duration: '4.34'},
+        {name:'Moonbeam', author: 'Waterflame', audio:moonBeam, duration: '4.44'},
+        {name:'Techock', author: 'Waterflame',  audio:techock, duration: '2.33'},
         ],
       pause: false,
     };
@@ -168,11 +170,11 @@ class CardProfile extends React.Component {
         <div className={cx("card")}>
           <div className={cx("current-song")}>
           <audio autoplay loop ref={ref => this.playerRef = ref} >
-              <source src={ currentSong.audio } type="audio/ogg"/>
+              <source src={ currentSong.audio } type="audio/mp3"/>
                 Your browser does not support the audio element.
             </audio>
             <audio autoplay loop ref={ref => this.playerRef = ref} >
-              <source src={ currentSong.audio } type="audio/ogg"/>
+              <source src={ currentSong.audio } type="audio/mp3"/>
                 Your browser does not support the audio element.
             </audio>
 
