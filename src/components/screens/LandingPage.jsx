@@ -205,8 +205,7 @@ const LandingPage = () => {
               National University of Singapore.
               <br /> <br />
               Currently pursuing a part-time Master of Computer Science at
-              Georgia Institute of Technology, specializing in artificial
-              intelligence and human-computer interaction.
+              Georgia Institute of Technology.
             </div>
           </div>
         </div>
