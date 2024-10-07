@@ -4,7 +4,7 @@ import classNames from "classnames/bind";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import "../../screens/scss/GlobalStyles.scss";
 import sciFi from "../../assets/sci-fi.png";
-import himori from "../../assets/Himori.png";
+import sh from "../../assets/Sh.png";
 import orangeButton from "../../assets/button.png";
 import pastelDreams from "../../assets/pastel-dreams.png";
 import coupleGoals from "../../assets/couple-goals.png";
@@ -159,7 +159,7 @@ const LandingPage = () => {
           </div>
           {accordion ? (
             <div className={cx("label-bg-filler")}>
-              <img className={cx("profile")} src={himori} alt="profile" />
+              <img className={cx("profile")} src={sh} alt="profile" />
 
               <div className={cx("name-label")}>Shermaine Lim </div>
               <div className={cx("role-label")}> - Software Engineer - </div>
