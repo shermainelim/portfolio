@@ -4,7 +4,7 @@ import classNames from "classnames/bind";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import "../../screens/scss/GlobalStyles.scss";
 import sciFi from "../../assets/sci-fi.png";
-import sh from "../../assets/Sh.png";
+import profilePic from "../../assets/shermaineLim.png";
 import orangeButton from "../../assets/button.png";
 import pastelDreams from "../../assets/pastel-dreams.png";
 import coupleGoals from "../../assets/couple-goals.png";
@@ -159,7 +159,7 @@ const LandingPage = () => {
           </div>
           {accordion ? (
             <div className={cx("label-bg-filler")}>
-              <img className={cx("profile")} src={sh} alt="profile" />
+              <img className={cx("profile")} src={profilePic} alt="profile" />
 
               <div className={cx("name-label")}>Shermaine Lim </div>
               <div className={cx("role-label")}> - Software Engineer - </div>
@@ -414,48 +414,6 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-
-            <div className={cx("project-image-container")}>
-              <a
-                href="https://pastelwithdreams.netlify.app/"
-                className={cx("link")}
-              >
-                <img
-                  className={
-                    portfolio
-                      ? cx("image-pastel-dreams-show")
-                      : cx("image-pastel-dreams-none")
-                  }
-                  src={pastelDreams}
-                  alt="pastel-dreams"
-                ></img>
-              </a>
-              <div className={cx("project-desc-container")}>
-                <div
-                  className={
-                    portfolio ? cx("desc-title-show") : cx("desc-title-none")
-                  }
-                >
-                  <a
-                    href="https://pastelwithdreams.netlify.app/"
-                    className={cx("title-label")}
-                  >
-                    JavaScript Aesthetic Portfolio
-                  </a>
-                </div>
-                <div
-                  className={
-                    portfolio || closePortfolio
-                      ? cx("desc-subtitle-show")
-                      : cx("desc-subtitle-none")
-                  }
-                >
-                  Tech Stack: Vanilla JavaScript <br />
-                  <br />A 2-D Web-based aesthetic style portfolio with HTML, CSS
-                  and plain JS to minimize external dependencies.
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -535,26 +493,22 @@ const LandingPage = () => {
     return (
       <div style={closeContact ? { display: "none" } : null}>
         <div
-
-className={contact?cx("border-contact-open"):cx("border-contact-closed")}
-
-          
+          className={
+            contact ? cx("border-contact-open") : cx("border-contact-closed")
+          }
         >
-          <div  className={cx("label-container")}>
-            <div
-               className={cx("label")}
-              id="contact"
-            >
+          <div className={cx("label-container")}>
+            <div className={cx("label")} id="contact">
               CONTACT.PNG
             </div>
             <img
-               className={cx("minimize-icon")}
+              className={cx("minimize-icon")}
               src={minimize}
               alt="minimize"
               onClick={() => setContact(!contact)}
             ></img>{" "}
             <img
-             className={cx("close-icon")}
+              className={cx("close-icon")}
               src={close}
               alt="close"
               onClick={() => setCloseContact(!closeContact)}
@@ -562,38 +516,33 @@ className={contact?cx("border-contact-open"):cx("border-contact-closed")}
           </div>
           <div>
             <div
-
-className={contact?cx("img-container-show"):cx("img-container-none")}
-              
+              className={
+                contact ? cx("img-container-show") : cx("img-container-none")
+              }
             >
-             
               <img
-                   className={cx("img-banner")}
+                className={cx("img-banner")}
                 src={Waves}
                 alt="tech-contact-banner"
               />
-              <div
-                   className={cx("icon-container")}
-              >
-               
+              <div className={cx("icon-container")}>
                 <a href="mailto:shermaine.lim.si.hui@gmail.com">
                   <img
-                     className={cx("icon-gmail")}
+                    className={cx("icon-gmail")}
                     src={Gmail}
                     alt="Gmail-icon"
                   ></img>
                 </a>
                 <a href="https://github.com/shermainelim">
-                  
                   <img
-                       className={cx("icon-github")}
+                    className={cx("icon-github")}
                     src={GithubLogo}
                     alt="github-icon"
                   ></img>{" "}
                 </a>
                 <a href="https://www.linkedin.com/in/shermaine-lim/">
                   <img
-                   className={cx("icon-linkedin")}
+                    className={cx("icon-linkedin")}
                     src={Linkedin}
                     alt="linked-in-icon"
                   ></img>

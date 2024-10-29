@@ -179,7 +179,7 @@ class CardProfile extends React.Component {
             </audio>
 
             <span className={cx("song-name")}>{ currentSong.name }</span>
-            <span className={cx("song-autor")}>{ currentSong.author }</span>
+            <a href="https://www.youtube.com/channel/UCVuv5iaVR55QXIc_BHQLakA" className={cx("song-autor")}>By: { currentSong.author }</a>
             
             <div className={cx("time")}>
               <div className={cx("current-time")}>{ currentTime }</div>
@@ -215,7 +215,7 @@ class CardProfile extends React.Component {
                          
                              <div className={cx("track-discr")} >
                                <span className={cx("track-name")} >{music.name}</span>
-                               <span className={cx("track-author")} >{music.author}</span>
+                               <a href="https://www.youtube.com/channel/UCVuv5iaVR55QXIc_BHQLakA" className={cx("track-author")} >By: {music.author}</a>
                              </div>
                              <span className={cx("track-duration")} >
                                {(index === key)
