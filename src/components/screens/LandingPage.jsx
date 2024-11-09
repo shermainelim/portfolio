@@ -12,10 +12,10 @@ import twilightEnd from "../../assets/twilights-end-3d.png";
 import logicUniversity from "../../assets/logic-university.png";
 import minimize from "../../assets/minimize.png";
 import close from "../../assets/close.png";
-import tech from "../../assets/tech.gif";
+import musicPlayer from "../../assets/musicPlayer.png";
 import CardProfile from "../cards/CardProfile";
 import ReactIcon from "../../assets/circular/react.png";
-import GithubLogo from "../../assets/circular/github-logo.png";
+import GithubLogo from "../../assets/circular/github-logo-2.png";
 import Javascript from "../../assets/circular/javascript.png";
 import TypeScript from "../../assets/circular/typescript.svg";
 import AWS from "../../assets/circular/aws.svg";
@@ -23,7 +23,6 @@ import Figma from "../../assets/circular/figma.svg";
 import nodeJS from "../../assets/circular/nodeJS.png";
 import Gmail from "../../assets/circular/gmail.png";
 import Linkedin from "../../assets/circular/linkedin.png";
-import Waves from "../../assets/waves.gif";
 
 const LandingPage = () => {
   const cx = classNames.bind(styles);
@@ -198,14 +197,15 @@ const LandingPage = () => {
             }
           >
             <div className={cx("about-desc")}>
-              Frontend React Engineer skilled in web and mobile development with
-              JavaScript, TypeScript, ReactJS, and React Native. Developed
-              full-stack applications using ASP.NET Core (C#), Java Spring Boot,
-              and Python for machine learning during postgraduate studies at the
-              National University of Singapore.
-              <br /> <br />
-              Currently pursuing a part-time Master of Computer Science at
-              Georgia Institute of Technology.
+              I'm a Frontend React Engineer with a strong interest in building
+              responsive and user-friendly web and mobile applications. I’m
+              developing my skills in JavaScript, TypeScript, ReactJS, and React
+              Native, and I enjoy working on interfaces that are functional and
+              visually appealing. I strive to write clean code and focus on
+              improving performance to enhance the user experience. I’m
+              detail-oriented and committed to learning and growing, aiming to
+              create applications that users find both enjoyable and easy to
+              use.
             </div>
           </div>
         </div>
@@ -238,8 +238,8 @@ const LandingPage = () => {
           </div>
           <img
             className={music ? cx("music-img-show") : cx("music-img-none")}
-            src={tech}
-            alt="tech-music-player"
+            src={musicPlayer}
+            alt="music-player"
           ></img>
           {music ? <CardProfile /> : null}
         </div>
@@ -328,15 +328,16 @@ const LandingPage = () => {
 
             <div className={cx("project-image-container")}>
               <a
-                href="https://www.linkedin.com/feed/update/urn:li:activity:7194014025083424769/"
+                href="https://github.com/shermainelim/CoupleGoalsApp"
                 className={cx("link")}
               >
                 <img
                   className={portfolio ? cx("image-show") : cx("image-none")}
-                  src={twilightEnd}
-                  alt="twilight-end"
-                ></img>
+                  src={coupleGoals}
+                  alt="couple-goals"
+                />
               </a>
+
               <div className={cx("project-desc-container")}>
                 <div
                   className={
@@ -344,10 +345,10 @@ const LandingPage = () => {
                   }
                 >
                   <a
-                    href="https://www.linkedin.com/feed/update/urn:li:activity:7194014025083424769/"
+                    href="https://github.com/shermainelim/CoupleGoalsApp"
                     className={cx("title-label")}
                   >
-                    Twilight's End
+                    Couple Goals App
                   </a>
                 </div>
                 <div
@@ -357,17 +358,56 @@ const LandingPage = () => {
                       : cx("desc-subtitle-none")
                   }
                 >
-                  Tech Stack : C# and Unity Engine <br />
+                  Tech Stack : React, NodeJS, Redux Toolkit, MySQL & GitLab
+                  DevOps Pipleline <br />
+                  <br />A goal setting app that allows couples to set and track
+                  shared goals, such as saving money for house, vacation,
+                  starting a business or learning a new language. The app
+                  includes features like unique couple board space, synchronized
+                  progress and finance trackers.
+                </div>
+              </div>
+            </div>
+
+            <div className={cx("project-image-container")}>
+              <a
+                href="https://github.com/shermainelim/Logic-University-Stationery-Inventory-System"
+                className={cx("link")}
+              >
+                <img
+                  className={portfolio ? cx("image-show") : cx("image-none")}
+                  src={logicUniversity}
+                  alt="logic-university"
+                ></img>
+              </a>
+              <div className={cx("project-desc-container")}>
+                <div
+                  className={
+                    portfolio ? cx("desc-title-show") : cx("desc-title-none")
+                  }
+                >
+                  <a
+                    href="https://github.com/shermainelim/Logic-University-Stationery-Inventory-System"
+                    className={cx("title-label")}
+                  >
+                    Stationery Logistics Inventory System
+                  </a>
+                </div>
+                <div
+                  className={
+                    portfolio || closePortfolio
+                      ? cx("desc-subtitle-show")
+                      : cx("desc-subtitle-none")
+                  }
+                >
+                  Tech Stack: C# ASP.NET Core & Azure Machine Learning <br />
                   <br />
-                  This is a team project under Video Game Design and Programming
-                  module in my masters program. My team and I learnt how to
-                  create AI states on enemies, NPCs, game logic , 3D animation ,
-                  modelling, audio theory and so on etc.
-                  <br />
-                  Story: A hybrid vampire and human hero is hired to rid sun
-                  blob enemies that have invaded the Land of Vampara. Pure
-                  vampires cannot be in contact with the sunlight and live in
-                  Vampara with eternal crimson nights.
+                  This project is a full Software Development Life Cycle and
+                  about delivering a software solution aimed at computerizing
+                  and improving LOGIC University Stationary Store’s inventory
+                  and disbursement system. <br />
+                  Its main objective is to eliminate the reliance on manual
+                  processes.
                 </div>
               </div>
             </div>
@@ -520,11 +560,6 @@ const LandingPage = () => {
                 contact ? cx("img-container-show") : cx("img-container-none")
               }
             >
-              <img
-                className={cx("img-banner")}
-                src={Waves}
-                alt="tech-contact-banner"
-              />
               <div className={cx("icon-container")}>
                 <a href="mailto:shermaine.lim.si.hui@gmail.com">
                   <img

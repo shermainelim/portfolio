@@ -6,21 +6,21 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 import { faForward } from '@fortawesome/free-solid-svg-icons'
 import { faBackward } from '@fortawesome/free-solid-svg-icons'
 import { faPause } from '@fortawesome/free-solid-svg-icons'
-import radioActive from "../../assets/music/Radioactive.mp3";
-import techock from "../../assets/music/Techock.mp3";
-import moonBeam from "../../assets/music/Moonbeam.mp3";
-import skyFortress from "../../assets/music/Sky-Fortress.mp3";
+import alleyway from "../../assets/music/PeriTune_Alleyway.mp3";
+import villageFete from "../../assets/music/PeriTune_Village_Fete.mp3";
+import moonBeam from "../../assets/music/Waterflame_Moonbeam.mp3";
+import velocityCity from "../../assets/music/Waterflame_Velocity_Wings.mp3";
 
 class CardProfile extends React.Component {
 
     state = {
-      index: 3,
+      index: 0,
       currentTime: '0:00',
       musicList: [
-        {name:'Radioactive', author: 'Waterflame', audio: radioActive, duration: '3.45'}, 
-        {name:'Sky Fortress', author: 'Waterflame', audio:skyFortress, duration: '4.34'},
-        {name:'Moonbeam', author: 'Waterflame', audio:moonBeam, duration: '4.44'},
-        {name:'Techock', author: 'Waterflame',  audio:techock, duration: '2.33'},
+        {name:'Velcity City', author: 'Waterflame', audio:velocityCity, duration: '4.34', link: "https://www.youtube.com/channel/UCVuv5iaVR55QXIc_BHQLakA"},
+        {name:'Moonbeam', author: 'Waterflame', audio:moonBeam, duration: '4.44', link: "https://www.youtube.com/channel/UCVuv5iaVR55QXIc_BHQLakA"},
+        {name:'Alleyway', author: 'Peritune', audio: alleyway, duration: '3.45', link: "https://peritune.com/"}, 
+        {name:'Village Fete', author: 'Peritune',  audio:villageFete, duration: '2.33', link: "https://peritune.com/"},
         ],
       pause: false,
     };
@@ -179,7 +179,7 @@ class CardProfile extends React.Component {
             </audio>
 
             <span className={cx("song-name")}>{ currentSong.name }</span>
-            <a href="https://www.youtube.com/channel/UCVuv5iaVR55QXIc_BHQLakA" className={cx("song-autor")}>By: { currentSong.author }</a>
+            <a href={currentSong.link}className={cx("song-autor")}>By: { currentSong.author }</a>
             
             <div className={cx("time")}>
               <div className={cx("current-time")}>{ currentTime }</div>
@@ -215,7 +215,7 @@ class CardProfile extends React.Component {
                          
                              <div className={cx("track-discr")} >
                                <span className={cx("track-name")} >{music.name}</span>
-                               <a href="https://www.youtube.com/channel/UCVuv5iaVR55QXIc_BHQLakA" className={cx("track-author")} >By: {music.author}</a>
+                               <a href={music.link} className={cx("track-author")} >By: {music.author}</a>
                              </div>
                              <span className={cx("track-duration")} >
                                {(index === key)

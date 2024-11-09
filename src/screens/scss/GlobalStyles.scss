@@ -1,20 +1,23 @@
 body,
 html {
-  background-image: url("../../assets//wall-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url("../../assets//wall-bg.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background-color: #C6B18F;
 }
 
 div#root {
-  background-image: url("../../assets//wall-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url("../../assets//wall-bg.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background-color: #C6B18F;
 }
 
 div.app {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../../assets//wall-bg.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-image: url("../../assets//wall-bg.png");
+  background-color: #C6B18F;
 }
 
 @media (max-width: 60rem) {

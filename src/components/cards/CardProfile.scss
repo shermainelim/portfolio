@@ -1,8 +1,8 @@
 $border-radius: 1.25rem;
 
-$primary: #000000;
-$base: #000000;
-$shadow-color:  #000000;
+$primary: #fff;
+$base: #fff;
+$shadow-color:  #fffae430;
 $lighter-shadow: rgba($shadow-color, .7);
 $white: #FFEBEB;
 $gray: #8c8c8c;
@@ -29,7 +29,7 @@ body{
     color: $white;
     font-weight: 100;
     box-shadow: 0rem 0rem 4.375rem 0rem $shadow-color;
-    background: $base;
+    background: #84715d;
     overflow: hidden;
     .current-song{
       display: flex;
@@ -39,8 +39,7 @@ body{
       padding: 1.25rem 0rem;
       border-radius: $border-radius;
       color: $base;
-      background: $white;
-      margin-top: 1.875rem;
+      background: #84715d;
       padding-left: 2.5rem;
       padding-right: 2.5rem;
       audio{
