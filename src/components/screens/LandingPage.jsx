@@ -61,7 +61,7 @@ const LandingPage = () => {
             src={orangeButton}
             alt="orange-button"
           ></img>
-          <span className={cx("btn-short-label")}>Home</span>
+          <span className={cx("btn-short-label")}>Home 1</span>
         </Link>
 
         <Link
