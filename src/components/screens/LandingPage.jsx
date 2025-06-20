@@ -6,10 +6,10 @@ import "../../screens/scss/GlobalStyles.scss";
 import sciFi from "../../assets/sci-fi.png";
 import profilePic from "../../assets/shermaineLim.png";
 import orangeButton from "../../assets/button.png";
-import pastelDreams from "../../assets/pastel-dreams.png";
 import coupleGoals from "../../assets/couple-goals.png";
 import twilightEnd from "../../assets/twilights-end-3d.png";
 import logicUniversity from "../../assets/logic-university.png";
+import javaEMS from "../../assets/java-ems .png";
 import minimize from "../../assets/minimize.png";
 import close from "../../assets/close.png";
 import musicPlayer from "../../assets/musicPlayer.png";
@@ -285,13 +285,13 @@ const LandingPage = () => {
           >
             <div className={cx("project-image-container")}>
               <a
-                href="https://github.com/shermainelim/CoupleGoalsApp"
+                href="https://www.linkedin.com/feed/update/urn:li:activity:7194014025083424769/"
                 className={cx("link")}
               >
                 <img
                   className={portfolio ? cx("image-show") : cx("image-none")}
-                  src={coupleGoals}
-                  alt="couple-goals"
+                    src={twilightEnd}
+                  alt="twilight-end"
                 />
               </a>
 
@@ -302,10 +302,10 @@ const LandingPage = () => {
                   }
                 >
                   <a
-                    href="https://github.com/shermainelim/CoupleGoalsApp"
+                    href="https://www.linkedin.com/feed/update/urn:li:activity:7194014025083424769/"
                     className={cx("title-label")}
                   >
-                    Couple Goals App
+                    Twilight's End
                   </a>
                 </div>
                 <div
@@ -315,13 +315,12 @@ const LandingPage = () => {
                       : cx("desc-subtitle-none")
                   }
                 >
-                  Tech Stack : React, NodeJS, Redux Toolkit, MySQL & GitLab
-                  DevOps Pipleline <br />
-                  <br />A goal setting app that allows couples to set and track
-                  shared goals, such as saving money for house, vacation,
-                  starting a business or learning a new language. The app
-                  includes features like unique couple board space, synchronized
-                  progress and finance trackers.
+                  Tech Stack : C# and Unity Engine <br />
+                  <br />This is a team project under Video Game Design and Programming
+                  module. We learnt how to
+                  create AI states on enemies, NPCs, game logic , 3D animation ,
+                  modelling, audio theory and so on etc. Story: A hybrid vampire and human hero is hired to rid sun
+                  blob enemies that have invaded the Vampara Land.
                 </div>
               </div>
             </div>
@@ -419,8 +418,9 @@ const LandingPage = () => {
               >
                 <img
                   className={portfolio ? cx("image-show") : cx("image-none")}
-                  src={logicUniversity}
-                  alt="logic-university"
+                  style={{height:"7.5rem"}}
+                  src={javaEMS}
+                  alt="java-EMS"
                 ></img>
               </a>
               <div className={cx("project-desc-container")}>
@@ -430,10 +430,10 @@ const LandingPage = () => {
                   }
                 >
                   <a
-                    href="https://github.com/shermainelim/Logic-University-Stationery-Inventory-System"
+                    href="https://github.com/shermainelim/Spring-Boot-Java-Employee-Management-System"
                     className={cx("title-label")}
                   >
-                    Stationery Logistics Inventory System
+                    Spring Boot Java Employee Management System
                   </a>
                 </div>
                 <div
@@ -443,14 +443,9 @@ const LandingPage = () => {
                       : cx("desc-subtitle-none")
                   }
                 >
-                  Tech Stack: C# ASP.NET Core & Azure Machine Learning <br />
+                  Tech Stack: Java, Spring Boot & MySQL <br />
                   <br />
-                  This project is a full Software Development Life Cycle and
-                  about delivering a software solution aimed at computerizing
-                  and improving LOGIC University Stationary Store’s inventory
-                  and disbursement system. <br />
-                  Its main objective is to eliminate the reliance on manual
-                  processes.
+                  An Employee Management System involving Staff, Manager and Admin Roles for CRUD approval using Spring Boot, Java and MySQL .
                 </div>
               </div>
             </div>
