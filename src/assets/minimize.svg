@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 87" width="90" height="87">
+	<title>minimize</title>
+	<defs>
+		<image  width="90" height="87" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABXAQMAAAC++MCfAAAAAXNSR0IB2cksfwAAAAZQTFRFMD6B////6ldPyQAAACpJREFUeJxjZEACjLg58g9gzP9Mo5xRzjDl/OSAsKnDGXj/0IfDgARwcwBd+K5Yi9jgEwAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+</svg>

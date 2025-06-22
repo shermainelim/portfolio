@@ -532,8 +532,8 @@
           .icon-container-top {
             display: flex;
             flex-direction: row;
-            padding: 0.625rem;
-            justify-content: center;
+            padding: 0.4rem;
+            justify-content: space-evenly;
 
             .icon-img {
               margin-top: 0.1875rem;
@@ -545,9 +545,7 @@
           .icon-container-bottom {
             display: flex;
             flex-direction: row;
-            padding: 0.625rem;
-            justify-content: center;
-            margin-top: -1.25rem;
+            justify-content: space-evenly;
 
             .icon-img {
               margin-top: 0.125rem;

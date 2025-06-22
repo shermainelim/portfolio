@@ -9,20 +9,20 @@ import orangeButton from "../../assets/button.png";
 import coupleGoals from "../../assets/couple-goals.png";
 import twilightEnd from "../../assets/twilights-end-3d.png";
 import logicUniversity from "../../assets/logic-university.png";
-import javaEMS from "../../assets/java-ems .png";
-import minimize from "../../assets/minimize.png";
-import close from "../../assets/close.png";
+import javaEMS from "../../assets/java-ems.png";
+import minimize from "../../assets/minimize.svg";
+import close from "../../assets/close.svg";
 import musicPlayer from "../../assets/musicPlayer.png";
 import CardProfile from "../cards/CardProfile";
-import ReactIcon from "../../assets/circular/react.png";
-import GithubLogo from "../../assets/circular/github-logo-2.png";
-import Javascript from "../../assets/circular/javascript.png";
-import TypeScript from "../../assets/circular/typescript.svg";
-import AWS from "../../assets/circular/aws.svg";
-import Figma from "../../assets/circular/figma.svg";
-import nodeJS from "../../assets/circular/nodeJS.png";
-import Gmail from "../../assets/circular/gmail.png";
-import Linkedin from "../../assets/circular/linkedin.png";
+import ReactIcon from "../../assets/circular-icons/react.svg";
+import GithubLogo from "../../assets/circular-icons/github.svg";
+import Javascript from "../../assets/circular-icons/javascript.svg";
+import TypeScript from "../../assets/circular-icons/typescript.svg";
+import AWS from "../../assets/circular-icons/aws.svg";
+import Figma from "../../assets/circular-icons/figma.svg";
+import nodeJS from "../../assets/circular-icons/nodeJS.svg";
+import Gmail from "../../assets/circular-icons/gmail.svg";
+import Linkedin from "../../assets/circular-icons/linkedin.svg";
 
 const LandingPage = () => {
   const cx = classNames.bind(styles);
@@ -197,15 +197,10 @@ const LandingPage = () => {
             }
           >
             <div className={cx("about-desc")}>
-              I'm a Frontend React Engineer with a strong interest in building
-              responsive and user-friendly web and mobile applications. I’m
-              developing my skills in JavaScript, TypeScript, ReactJS, and React
-              Native, and I enjoy working on interfaces that are functional and
-              visually appealing. I strive to write clean code and focus on
-              improving performance to enhance the user experience. I’m
-              detail-oriented and committed to learning and growing, aiming to
-              create applications that users find both enjoyable and easy to
-              use.
+              I'm a software engineer with 3+ years of experience, specializing in frontend development using React, TypeScript, Redux and MobX. 
+              I enjoy building responsive, intuitive applications that are both performant and user-focused. 
+              I've worked on geospatial platforms and scalable UI tools, and I value clean code, design thinking, and cross-functional collaboration. 
+              I'm AWS-certified and currently building my skills in backend and cloud development, with the goal of becoming a full-stack software engineer.
             </div>
           </div>
         </div>
@@ -489,16 +484,18 @@ const LandingPage = () => {
           >
             <div className={cx("icon-container-top")}>
               <img
+              style={{marginRight:"4px"}}
                 className={cx("icon-img")}
                 src={ReactIcon}
                 alt="react-icon"
               ></img>
               <img
+              style={{marginRight:"4px"}}
                 className={cx("icon-img")}
                 src={Javascript}
                 alt="javascript-icon"
-              ></img>{" "}
-              <img className={cx("icon-img")} src={AWS} alt="aws-icon"></img>
+              ></img>
+              <img style={{marginLeft:"4px"}} className={cx("icon-img")} src={AWS} alt="aws-icon"></img>
             </div>
 
             <div className={cx("icon-container-bottom")}>
