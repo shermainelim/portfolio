@@ -9,6 +9,7 @@ import orangeButton from "../../assets/button.png";
 import coupleGoals from "../../assets/couple-goals.png";
 import twilightEnd from "../../assets/twilights-end-3d.png";
 import logicUniversity from "../../assets/logic-university.png";
+import grabCarBaby from "../../assets/grabCarBaby.png";
 import javaEMS from "../../assets/java-ems.png";
 import minimize from "../../assets/minimize.svg";
 import close from "../../assets/close.svg";
@@ -197,10 +198,14 @@ const LandingPage = () => {
             }
           >
             <div className={cx("about-desc")}>
-              I'm a software engineer with 3+ years of experience, specializing in frontend development using React, TypeScript, Redux and MobX. 
-              I enjoy building responsive, intuitive applications that are both performant and user-focused. 
-              I've worked on geospatial platforms and scalable UI tools, and I value clean code, design thinking, and cross-functional collaboration. 
-              I'm AWS-certified and currently building my skills in backend and cloud development, with the goal of becoming a full-stack software engineer.
+              I'm a software engineer with 3+ years of experience, specializing
+              in frontend development using React, TypeScript, Redux and MobX. I
+              enjoy building responsive, intuitive applications that are both
+              performant and user-focused. I've worked on geospatial platforms
+              and scalable UI tools, and I value clean code, design thinking,
+              and cross-functional collaboration. I'm AWS-certified and
+              currently building my skills in backend and cloud development,
+              with the goal of becoming a full-stack software engineer.
             </div>
           </div>
         </div>
@@ -278,47 +283,7 @@ const LandingPage = () => {
                 : cx("portfolio-accordion-filler-closed")
             }
           >
-            <div className={cx("project-image-container")}>
-              <a
-                href="https://www.linkedin.com/feed/update/urn:li:activity:7194014025083424769/"
-                className={cx("link")}
-              >
-                <img
-                  className={portfolio ? cx("image-show") : cx("image-none")}
-                    src={twilightEnd}
-                  alt="twilight-end"
-                />
-              </a>
-
-              <div className={cx("project-desc-container")}>
-                <div
-                  className={
-                    portfolio ? cx("desc-title-show") : cx("desc-title-none")
-                  }
-                >
-                  <a
-                    href="https://www.linkedin.com/feed/update/urn:li:activity:7194014025083424769/"
-                    className={cx("title-label")}
-                  >
-                    Twilight's End
-                  </a>
-                </div>
-                <div
-                  className={
-                    portfolio || closePortfolio
-                      ? cx("desc-subtitle-show")
-                      : cx("desc-subtitle-none")
-                  }
-                >
-                  Tech Stack : C# and Unity Engine <br />
-                  <br />This is a team project under Video Game Design and Programming
-                  module. We learnt how to
-                  create AI states on enemies, NPCs, game logic , 3D animation ,
-                  modelling, audio theory and so on etc. Story: A hybrid vampire and human hero is hired to rid sun
-                  blob enemies that have invaded the Vampara Land.
-                </div>
-              </div>
-            </div>
+        
 
             <div className={cx("project-image-container")}>
               <a
@@ -408,14 +373,14 @@ const LandingPage = () => {
 
             <div className={cx("project-image-container")}>
               <a
-                href="https://github.com/shermainelim/Logic-University-Stationery-Inventory-System"
+                href="https://www.figma.com/proto/ydeMYFBGG96ImAl7knM2G9/GrabCar-Baby?node-id=0-1&t=zisPJsdO0e6Lcv1m-1"
                 className={cx("link")}
               >
                 <img
                   className={portfolio ? cx("image-show") : cx("image-none")}
-                  style={{height:"7.5rem"}}
-                  src={javaEMS}
-                  alt="java-EMS"
+                  style={{ height: "11.5rem" }}
+                  src={grabCarBaby}
+                  alt="grab-car-baby"
                 ></img>
               </a>
               <div className={cx("project-desc-container")}>
@@ -425,10 +390,10 @@ const LandingPage = () => {
                   }
                 >
                   <a
-                    href="https://github.com/shermainelim/Spring-Boot-Java-Employee-Management-System"
+                    href="https://www.figma.com/proto/ydeMYFBGG96ImAl7knM2G9/GrabCar-Baby?node-id=0-1&t=zisPJsdO0e6Lcv1m-1"
                     className={cx("title-label")}
                   >
-                    Spring Boot Java Employee Management System
+                    GrabCar Baby Figma Design Prototype
                   </a>
                 </div>
                 <div
@@ -438,9 +403,61 @@ const LandingPage = () => {
                       : cx("desc-subtitle-none")
                   }
                 >
-                  Tech Stack: Java, Spring Boot & MySQL <br />
+                  Tech Stack : Figma
                   <br />
-                  An Employee Management System involving Staff, Manager and Admin Roles for CRUD approval using Spring Boot, Java and MySQL .
+                  <br />
+                  Introduces an infant ride option with baby seats, addressing key pain points missing in Grab Singapore.
+                  <br />
+                  Flow 1 - Infant-Friendly Ride: - Quick and simple booking
+                  experience designed for passengers with infants.
+                  <br />
+                  Flow 2 - Customizable Booking Options: Drawer component lets users check multiple ride types for more flexible matching.
+                  <br />
+                  Flow 4 – Smarter Ride Matching: Tracks wait time and expands ride options for quicker pickup.
+                </div>
+              </div>
+            </div>
+
+
+                <div className={cx("project-image-container")}>
+              <a
+                href="https://www.linkedin.com/feed/update/urn:li:activity:7194014025083424769/"
+                className={cx("link")}
+              >
+                <img
+                  className={portfolio ? cx("image-show") : cx("image-none")}
+                  src={twilightEnd}
+                  alt="twilight-end"
+                />
+              </a>
+
+              <div className={cx("project-desc-container")}>
+                <div
+                  className={
+                    portfolio ? cx("desc-title-show") : cx("desc-title-none")
+                  }
+                >
+                  <a
+                    href="https://www.linkedin.com/feed/update/urn:li:activity:7194014025083424769/"
+                    className={cx("title-label")}
+                  >
+                    Twilight's End
+                  </a>
+                </div>
+                <div
+                  className={
+                    portfolio || closePortfolio
+                      ? cx("desc-subtitle-show")
+                      : cx("desc-subtitle-none")
+                  }
+                >
+                  Tech Stack : C# and Unity Engine <br />
+                  <br />
+                  This is a team project under Video Game Design and Programming
+                  module. We learnt how to create AI states on enemies, NPCs,
+                  game logic , 3D animation , modelling, audio theory and so on
+                  etc. Story: A hybrid vampire and human hero is hired to rid
+                  sun blob enemies that have invaded the Vampara Land.
                 </div>
               </div>
             </div>
@@ -484,18 +501,23 @@ const LandingPage = () => {
           >
             <div className={cx("icon-container-top")}>
               <img
-              style={{marginRight:"4px"}}
+                style={{ marginRight: "4px" }}
                 className={cx("icon-img")}
                 src={ReactIcon}
                 alt="react-icon"
               ></img>
               <img
-              style={{marginRight:"4px"}}
+                style={{ marginRight: "4px" }}
                 className={cx("icon-img")}
                 src={Javascript}
                 alt="javascript-icon"
               ></img>
-              <img style={{marginLeft:"4px"}} className={cx("icon-img")} src={AWS} alt="aws-icon"></img>
+              <img
+                style={{ marginLeft: "4px" }}
+                className={cx("icon-img")}
+                src={AWS}
+                alt="aws-icon"
+              ></img>
             </div>
 
             <div className={cx("icon-container-bottom")}>
